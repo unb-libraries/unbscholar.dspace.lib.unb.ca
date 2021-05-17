@@ -27,6 +27,17 @@ services:
     networks:
       - unbscholar.dspace.lib.unb.ca
 
+  unbscholar.solr.lib.unb.ca:
+    build:
+      context: solr/
+    restart: always
+    env_file:
+      - ./env/dspace.env
+    expose:
+      - "8080"
+    networks:
+      - unbscholar.dspace.lib.unb.ca
+
 networks:
   unbscholar.dspace.lib.unb.ca:
     name: unbscholar.dspace.lib.unb.ca
