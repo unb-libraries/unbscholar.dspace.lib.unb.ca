@@ -48,14 +48,12 @@ ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
 ENV JAVA_OPTS=-Xmx4096m
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
-
-EXPOSE 8080 8009
-
-COPY build/config/local.cfg $DSPACE_INSTALL/config/local.cfg
-COPY build/scripts /scripts
+COPY build /build
 
 RUN apt-get update && apt-get --yes install netcat && \
-  ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server
+  ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
+  mv /build/config/local.cfg $DSPACE_INSTALL/config/local.cfg && \
+  mv /build/scripts /scripts
 
 ENTRYPOINT ["/scripts/run.sh"]
 
