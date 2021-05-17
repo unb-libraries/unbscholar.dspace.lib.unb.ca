@@ -1,0 +1,27 @@
+dockworker:
+  version: '3.0'
+  application:
+    name: unbscholar.dspace.lib.unb.ca
+    finish_marker: 'Server startup in'
+    project_prefix: SCHOLAR
+    upstream_images:
+      - maven:3-jdk-8-alpine
+      - tomcat:8-jre8
+    uuid: 3507
+  deployment:
+    environments:
+      - dev
+      - prod
+    local:
+      localhost_hostnames:
+        - unbscholar.dspace.lib.unb.ca
+  github:
+    repo: unbscholar.dspace.lib.unb.ca
+    owner: unb-libraries
+  image:
+    push_branches:
+      - dev
+      - prod
+    name: ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca
+    date_tag_image: true
+    repository: ghcr

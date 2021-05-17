@@ -1,0 +1,20 @@
+{
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "name": "unb-libraries/unbscholar.dspace.lib.unb.ca",
+  "description": "Scaffold and provision local development for unbscholar.dspace.lib.unb.ca",
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    }
+  },
+  "require-dev": {
+    "unb-libraries/dockworker": "~4"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "vendor/bin/dockworker dockworker:git:setup-hooks"
+    ]
+  }
+}
