@@ -45,17 +45,17 @@ FROM tomcat:8-jdk11
 
 ENV DSPACE_INSTALL /dspace
 ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
+ENV JAVA_OPTS=-Xmx4096m
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
+
+EXPOSE 8080 8009
 
 COPY build/config/local.cfg $DSPACE_INSTALL/config/local.cfg
 COPY build/scripts /scripts
 
 RUN apt-get update && apt-get --yes install netcat && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server
-
-EXPOSE 8080 8009
-ENV JAVA_OPTS=-Xmx4096m
 
 ENTRYPOINT ["/scripts/run.sh"]
 
