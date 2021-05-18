@@ -1,0 +1,130 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dspace
+    appMajor: "7"
+    instance: unbscholar.dspace.lib.unb.ca
+    tier: backend
+    uri: dev-unbscholar.dspace.lib.unb.ca
+    vcsOwner: unb-libraries
+    vcsRepository: unbscholar.dspace.lib.unb.ca
+    vcsRef: dev
+  name: unbscholar-dspace-lib-unb-ca
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      uri: dev-unbscholar.dspace.lib.unb.ca
+  replicas: 1
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: dspace
+        appMajor: "7"
+        instance: unbscholar.dspace.lib.unb.ca
+        tier: backend
+        uri: dev-unbscholar.dspace.lib.unb.ca
+        vcsOwner: unb-libraries
+        vcsRepository: unbscholar.dspace.lib.unb.ca
+        vcsRef: dev
+    spec:
+      nodeSelector:
+        deployenv: dev
+      containers:
+        -
+          name: unbscholar-dspace-lib-unb-ca
+          readinessProbe:
+            httpGet:
+              path: /server
+              port: 8080
+            initialDelaySeconds: 65
+            timeoutSeconds: 3
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /server
+              port: 8080
+            initialDelaySeconds: 130
+            timeoutSeconds: 3
+            periodSeconds: 15
+          env:
+            -
+              name: DEPLOY_ENV
+              value: dev
+            -
+              name: DSPACE_HOSTNAME
+              value: dev-unbscholar.dspace.lib.unb.ca
+            -
+              name: DSPACE_PROTOCOL
+              value: https
+            -
+              name: DSPACE_URI
+              value: dev-unbscholar.lib.unb.ca
+            -
+              name: DSPACE_REST_HOST
+              value: dev-unbscholar.dspace.lib.unb.ca
+            -
+              name: DSPACE_REST_PORT
+              value: '443'
+            -
+              name: DSPACE_REST_NAMESPACE
+              value: /server
+            -
+              name: DSPACE_REST_SSL
+              value: 'true'
+            -
+              name: POSTGRES_DB_HOST
+              value: unbscholar-postgres-lib-unb-ca
+            -
+              name: POSTGRES_DB_PORT
+              value: "5432"
+            -
+              name: POSTGRES_DB_NAME
+              value: dspace
+            -
+              name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: unbscholar
+                  key: db-user
+            -
+              name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: unbscholar
+                  key: db-user-pass
+            -
+              name: SOLR_HOST
+              value: unbscholar-solr-lib-unb-ca
+            -
+              name: SOLR_PORT
+              value: "8983"
+            -
+              name: SOLR_PATH
+              value: solr
+          image: "||DEPLOYMENTIMAGE||"
+          imagePullPolicy: Always
+          ports:
+            -
+              containerPort: 8080
+          volumeMounts:
+            -
+              mountPath: /dspace/assetstore
+              name: dspace-persistent-storage
+      priorityClassName: dev-med-priority-services
+      imagePullSecrets:
+        -
+          name: docker-hub-auth
+      restartPolicy: Always
+      volumes:
+        -
+          name: dspace-persistent-storage
+          persistentVolumeClaim:
+            claimName: unbscholar-dspace-lib-unb-ca
