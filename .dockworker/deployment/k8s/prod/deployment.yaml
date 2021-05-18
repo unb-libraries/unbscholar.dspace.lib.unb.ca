@@ -66,7 +66,19 @@ spec:
               value: https
             -
               name: DSPACE_URI
+              value: unbscholar.lib.unb.ca
+            -
+              name: DSPACE_REST_HOST
               value: unbscholar.dspace.lib.unb.ca
+            -
+              name: DSPACE_REST_PORT
+              value: '443'
+            -
+              name: DSPACE_REST_NAMESPACE
+              value: /server
+            -
+              name: DSPACE_REST_SSL
+              value: 'true'
             -
               name: POSTGRES_DB_HOST
               value: unbscholar-postgres-lib-unb-ca
@@ -77,13 +89,13 @@ spec:
               name: POSTGRES_DB_NAME
               value: dspace
             -
-              name: POSTGRES_DB_USER
+              name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
                   name: unbscholar
                   key: db-user
             -
-              name: POSTGRES_DB_PASS
+              name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: unbscholar
