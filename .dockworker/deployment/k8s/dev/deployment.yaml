@@ -109,6 +109,9 @@ spec:
             -
               name: SOLR_PATH
               value: solr
+            -
+              name: SOLR_PROTOCOL
+              value: http
           image: "||DEPLOYMENTIMAGE||"
           imagePullPolicy: Always
           ports:
