@@ -55,6 +55,14 @@ RUN apt-get update && apt-get --yes install netcat && \
   mv /build/config/local.cfg $DSPACE_INSTALL/config/local.cfg && \
   mv /build/scripts /scripts
 
+RUN sed -i 's|\
+  </Host>|\
+    <Valve className="org.apache.catalina.valves.RemoteIpValve" \
+      remoteIpHeader="X-Forwarded-For" \
+      protocolHeader="X-Forwarded-Proto"/>\
+  </Host>|' \
+  /usr/local/tomcat/conf/server.xml
+
 ENTRYPOINT ["/scripts/run.sh"]
 
 ARG BUILD_DATE
