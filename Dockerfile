@@ -55,6 +55,7 @@ RUN apt-get update && apt-get --yes install netcat && \
   mv /build/config/local.cfg $DSPACE_INSTALL/config/local.cfg && \
   mv /build/scripts /scripts
 
+# Assert required X-Forwarded headers to tomcat apps.
 RUN sed -i 's|\
   </Host>|\
     <Valve className="org.apache.catalina.valves.RemoteIpValve" \
