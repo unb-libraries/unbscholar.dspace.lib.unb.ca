@@ -53,16 +53,8 @@ COPY build /build
 RUN apt-get update && apt-get --yes install netcat && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   mv /build/config/local.cfg $DSPACE_INSTALL/config/local.cfg && \
-  mv /build/scripts /scripts
-
-# Assert required X-Forwarded headers to tomcat apps.
-RUN sed -i 's|\
-  </Host>|\
-    <Valve className="org.apache.catalina.valves.RemoteIpValve" \
-      remoteIpHeader="X-Forwarded-For" \
-      protocolHeader="X-Forwarded-Proto"/>\
-  </Host>|' \
-  /usr/local/tomcat/conf/server.xml
+  mv /build/scripts /scripts && \
+  /scripts/add_xforward_tomcat.sh
 
 ENTRYPOINT ["/scripts/run.sh"]
 
