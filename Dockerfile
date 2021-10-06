@@ -2,7 +2,7 @@
 FROM maven:3-jdk-11 as build
 
 ARG TARGET_DIR=dspace-installer
-ARG DSPACE_REFSPEC=dspace-7.0-beta5
+ARG DSPACE_REFSPEC=dspace-7.0
 
 WORKDIR /app
 
