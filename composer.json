@@ -1,14 +1,14 @@
 {
-  "license": "MIT",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "name": "unb-libraries/unbscholar.dspace.lib.unb.ca",
-  "description": "Scaffold and provision local development for unbscholar.dspace.lib.unb.ca",
   "config": {
     "preferred-install": {
       "*": "dist"
     }
   },
+  "description": "Scaffold and provision local development for unbscholar.dspace.lib.unb.ca",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "name": "unb-libraries/unbscholar.dspace.lib.unb.ca",
+  "prefer-stable": true,
   "require-dev": {
     "unb-libraries/dockworker": "~4"
   },
