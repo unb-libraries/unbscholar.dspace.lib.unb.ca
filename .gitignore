@@ -1,3 +1,4 @@
 .gitkeep
 vendor
 composer.lock
+config-yml/.htaccess
