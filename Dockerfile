@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install git rsync && \
   git clone --depth 1 --branch ${DSPACE_REFSPEC} https://github.com/DSpace/DSpace.git /tmpDSpace && \
   rsync -a /tmpDSpace/ /app/
 
-COPY build/config/local.cfg /app/local.cfg
+COPY build/config/dspace/local.cfg /app/local.cfg
 RUN mkdir /install && \
   chown -Rv dspace: /install && \
   chown -Rv dspace: /app
@@ -52,7 +52,7 @@ COPY build /build
 
 RUN apt-get update && apt-get --yes install netcat && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
-  mv /build/config/local.cfg $DSPACE_INSTALL/config/local.cfg && \
+  mv /build/config/dspace/* $DSPACE_INSTALL/config/ && \
   mv /build/scripts /scripts && \
   /scripts/add_xforward_tomcat.sh
 
