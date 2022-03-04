@@ -50,9 +50,10 @@ ENV JAVA_OPTS=-Xmx4096m
 COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
 
-RUN apt-get update && apt-get --yes install netcat && \
+RUN apt-get update && apt-get --yes install netcat postfix && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   mv /build/config/dspace/* $DSPACE_INSTALL/config/ && \
+  cat /build/postfix/main.cf >> /etc/postfix/main.cf && \
   mv /build/scripts /scripts && \
   /scripts/add_xforward_tomcat.sh
 
