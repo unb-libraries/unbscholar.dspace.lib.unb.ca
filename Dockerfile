@@ -51,7 +51,7 @@ COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
 
 RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/main.cf && \
-  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install netcat postfix && rm -rf /var/lib/apt/lists/* && \
+  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat postfix && rm -rf /var/lib/apt/lists/* && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   mv /build/config/dspace/* $DSPACE_INSTALL/config/ && \
   mv /build/scripts /scripts && \
