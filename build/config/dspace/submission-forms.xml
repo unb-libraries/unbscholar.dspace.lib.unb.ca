@@ -59,7 +59,8 @@
                     <repeatable>true</repeatable>
                     <label>Author</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <!-- <hint>Enter the author's name (Family name, Given names).</hint> -->
+                    <hint>This is a test.</hint>
                     <required></required>
                 </field>
             </row>
