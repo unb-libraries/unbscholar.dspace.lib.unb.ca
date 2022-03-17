@@ -59,8 +59,7 @@
                     <repeatable>true</repeatable>
                     <label>Author</label>
                     <input-type>onebox</input-type>
-                    <!-- <hint>Enter the author's name (Family name, Given names).</hint> -->
-                    <hint>This is a test.</hint>
+                    <hint>Enter the author's name (Family name, Given names).</hint>
                     <required></required>
                 </field>
             </row>
@@ -102,6 +101,19 @@
                     </hint>
                     <required>You must enter at least the year.</required>
                 </field>
+
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>accessioned</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <style>col-sm-4</style>
+                    <label>Date Accessioned</label>
+                    <input-type>date</input-type>
+                    <hint>Date DSpace takes possession of item.</hint>
+                    <required></required>
+                </field>
+
 
                 <field>
                     <dc-schema>dc</dc-schema>
