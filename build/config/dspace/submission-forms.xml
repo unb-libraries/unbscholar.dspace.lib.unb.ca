@@ -88,6 +88,19 @@
                 </field>
             </row>
             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Type</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>Select the type of content of the item.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
               <!-- replacing this with our own controlled vocabulary below, keeping this just in case.
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -190,19 +203,7 @@
                     <required></required>
                 </field>
             </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Type</label>
-                    <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type of content of the item.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1367,92 +1368,44 @@
 
         <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
-                <displayed-value>Animation</displayed-value>
-                <stored-value>Animation</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>Article</displayed-value>
-                <stored-value>Article</stored-value>
+                <stored-value>journal article</stored-value>
             </pair>
             <pair>
-                <displayed-value>Book</displayed-value>
-                <stored-value>Book</stored-value>
+                <displayed-value>Case Study</displayed-value>
+                <stored-value>report</stored-value>
             </pair>
             <pair>
-                <displayed-value>Book chapter</displayed-value>
-                <stored-value>Book chapter</stored-value>
+                <displayed-value>Evaluation Report</displayed-value>
+                <stored-value>report</stored-value>
             </pair>
             <pair>
-                <displayed-value>Dataset</displayed-value>
-                <stored-value>Dataset</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Learning Object</displayed-value>
-                <stored-value>Learning Object</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Image</displayed-value>
-                <stored-value>Image</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Image, 3-D</displayed-value>
-                <stored-value>Image, 3-D</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Map</displayed-value>
-                <stored-value>Map</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Musical Score</displayed-value>
-                <stored-value>Musical Score</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Plan or blueprint</displayed-value>
-                <stored-value>Plan or blueprint</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Preprint</displayed-value>
-                <stored-value>Preprint</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Presentation</displayed-value>
-                <stored-value>Presentation</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Recording, acoustical</displayed-value>
-                <stored-value>Recording, acoustical</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Recording, musical</displayed-value>
-                <stored-value>Recording, musical</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Recording, oral</displayed-value>
-                <stored-value>Recording, oral</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Software</displayed-value>
-                <stored-value>Software</stored-value>
+                <displayed-value>Report</displayed-value>
+                <stored-value>report</stored-value>
             </pair>
             <pair>
                 <displayed-value>Technical Report</displayed-value>
-                <stored-value>Technical Report</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Thesis</displayed-value>
-                <stored-value>Thesis</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Video</displayed-value>
-                <stored-value>Video</stored-value>
+                <stored-value>technical report</stored-value>
             </pair>
             <pair>
                 <displayed-value>Working Paper</displayed-value>
-                <stored-value>Working Paper</stored-value>
+                <stored-value>working paper</stored-value>
             </pair>
             <pair>
-                <displayed-value>Other</displayed-value>
-                <stored-value>Other</stored-value>
+                <displayed-value>Video</displayed-value>
+                <stored-value>video</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Video</displayed-value>
+                <stored-value>video</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Book</displayed-value>
+                <stored-value>book</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Book Chapter</displayed-value>
+                <stored-value>book part</stored-value>
             </pair>
         </value-pairs>
 
