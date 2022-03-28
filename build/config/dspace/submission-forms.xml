@@ -1396,10 +1396,6 @@
                 <stored-value>video</stored-value>
             </pair>
             <pair>
-                <displayed-value>Video</displayed-value>
-                <stored-value>video</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>Book</displayed-value>
                 <stored-value>book</stored-value>
             </pair>
