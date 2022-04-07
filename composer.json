@@ -13,7 +13,7 @@
   "name": "unb-libraries/unbscholar.dspace.lib.unb.ca",
   "prefer-stable": true,
   "require-dev": {
-    "unb-libraries/dockworker": "~4"
+    "unb-libraries/dockworker": "^5"
   },
   "scripts": {
     "post-update-cmd": [
