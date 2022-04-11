@@ -311,7 +311,8 @@
                     <repeatable>false</repeatable>
                     <label>Title</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
+                    <!-- <hint>Enter the main title of the item.</hint> -->
+                    <hint>This is a test to see if different forms are being used correctly.</hint>
                     <required>You must enter a main title for this item.</required>
                 </field>
             </row>
