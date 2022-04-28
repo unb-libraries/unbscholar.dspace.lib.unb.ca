@@ -794,6 +794,134 @@
 
         </form>
 
+        <!-- Form which defines special steps for thesis submissions. -->
+        <form name="thesisStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Author</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the author's name.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>advisor</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Advisor</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the advisor's name.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>committeeMember</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Committee Member</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the committee member's name.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>lcsh</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Library of Congress Subject Headings</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>csh</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Canadian Subject Headings</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the Canadian Subject Headings for this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>classification</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Classification</label>
+                    <input-type>onebox</input-type>
+                    <hint>Catch-all for value from local classification system; global classification systems will receive specific qualifier.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publisher</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="publisher">dropdown</input-type>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>grantor</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Grantor</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="unb">dropdown</input-type>
+                    <hint>Select the grantor of the degree associated with this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Name</label>
+                    <style>col-sm-8</style>
+                    <input-type>onebox</input-type>
+                    <hint>Select the degree name.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>discipline</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Discipline</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="degree_name">dropdown</input-type>
+                    <hint>Select the discipline(s) associated with this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
         <!-- OpenAIRE specific forms -->
 
         <form name="openAIREPublicationPageoneForm">
@@ -1459,9 +1587,128 @@
                 <stored-value>other</stored-value>
             </pair>
         </value-pairs>
+        <!-- Degree name controlled vocabulary based on https://github.com/unb-libraries/unbscholar_islandora_form_operations/blob/7.x-1.x/data/degree_name.txt -->
+        <value-pairs value-pairs-name="degree_name" dc-term="isRequiredBy">
+            <pair>
+                <displayed-value>Graduate Certificate in Management</displayed-value>
+                <stored-value>issn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MA</displayed-value>
+                <stored-value>other</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MA (Sport &amp; Rec. Studies)</displayed-value>
+                <stored-value>ismn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MAHSR</displayed-value>
+                <stored-value>govdoc</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MBA</displayed-value>
+                <stored-value>uri</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MBA (Sport &amp; Rec. Management)</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MBA.SRM</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MBA/JD</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair><pair>
+                <displayed-value>MCS</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MCSC</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEM</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEd</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEng</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEng Environmental</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEng in Technology Management &amp; Entrepreneurship</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MEng.TME</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MF</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MFE</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MIDST</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MN</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MPHIL</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MSc</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MSc (Exercise &amp; Sport Science)</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MScE</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MScEM</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MScF</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>MScFE</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>PhD</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>PhD IDST</displayed-value>
+                <stored-value>isbn</stored-value>
+            </pair>
+
+        </value-pairs>
 
         <!-- Discipline controlled vocabulary based on https://github.com/unb-libraries/unbscholar_islandora_form_operations/blob/7.x-1.x/data/discipline.txt -->
-        <value-pairs value-pairs-name= "discipline_types" dc-term ="discipline">
+        <value-pairs value-pairs-name= "discipline_types" dc-term ="subject">
           <pair>
             <displayed-value>Anthropology</displayed-value>
             <stored-value>anthropology</stored-value>
@@ -1638,6 +1885,14 @@
             <displayed-value>Technology Management Entrepreneurship</displayed-value>
             <stored-value>technology management entrepreneurship</stored-value>
           </pair>
+        </value-pairs>
+
+        <!-- Controlled vocabulary for when a field must write UNB as the publisher (for theses) -->
+        <value-pairs value-pairs-name="unb" dc-term="publisher">
+            <pair>
+                <displayed-value>University of New Brunswick</displayed-value>
+                <stored-value>UNB</stored-value>
+            </pair>
         </value-pairs>
 
         <!-- OpenAIRE specific value pairs -->

@@ -20,6 +20,7 @@
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="traditional"/>
         <name-map collection-handle="123456789/67" submission-name="Publication"/>
+        <name-map collection-handle="123456789/66" submission-name="Theses"/>
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
              This sets up the following Entity-based Collections in that dataset:
@@ -129,7 +130,6 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-
         <step-definition id="upload">
             <heading>submit.progressbar.upload</heading>
             <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
@@ -140,6 +140,13 @@
             <processing-class>org.dspace.app.rest.submit.step.LicenseStep</processing-class>
             <type>license</type>
             <scope visibilityOutside="read-only">submission</scope>
+        </step-definition>
+
+        <!-- Thesis Step -->
+        <step-definition id="thesisStep" mandatory="true">
+          <heading>submit.progressbar.describe.stepone</heading>
+          <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+          <type>submission-form</type>
         </step-definition>
 
         <!-- This optional step may allow the user to select a Creative Commons license -->
@@ -213,6 +220,14 @@
     <!-- -->
     <!-- -->
     <submission-definitions>
+
+        <!--This process defines the thesis step -->
+        <submission-process name="thesis">
+            <step id="collection"/>
+            <step id="thesisStep"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
         <submission-process name="traditional">
