@@ -1,5 +1,5 @@
 dockworker:
-  version: '3.0'
+  version: '5'
   application:
     name: unbscholar.dspace.lib.unb.ca
     finish_marker: 'Server startup in'

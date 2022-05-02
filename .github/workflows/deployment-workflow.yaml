@@ -1,8 +1,9 @@
 name: unbscholar.dspace.lib.unb.ca
 
 on:
-  push:
   pull_request:
+  push:
+  workflow_dispatch:
 
 jobs:
   deploy:
