@@ -20,6 +20,7 @@
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="traditional"/>
         <name-map collection-handle="123456789/67" submission-name="Publication"/>
+        <name-map collection-handle="123456789/66" submission-name="Thesis"/>
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
              This sets up the following Entity-based Collections in that dataset:
@@ -142,6 +143,13 @@
             <scope visibilityOutside="read-only">submission</scope>
         </step-definition>
 
+        <!-- Thesis Step -->
+        <step-definition id="thesisStep" mandatory="true">
+          <heading>submit.progressbar.describe.stepone</heading>
+          <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+          <type>submission-form</type>
+        </step-definition>
+
         <!-- This optional step may allow the user to select a Creative Commons license -->
         <step-definition id="cclicense" mandatory="false">
             <heading>submit.progressbar.CClicense</heading>
@@ -233,6 +241,14 @@
             <!-- <step id="cclicense"/> -->
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
+            <step id="license"/>
+        </submission-process>
+
+        <!--This process defines the thesis step -->
+        <submission-process name="Thesis">
+            <step id="collection"/>
+            <step id="thesisStep"/>
+            <step id="upload"/>
             <step id="license"/>
         </submission-process>
 
