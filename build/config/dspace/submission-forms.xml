@@ -1605,7 +1605,7 @@
         </value-pairs>
 
         <!-- Discipline controlled vocabulary based on https://github.com/unb-libraries/unbscholar_islandora_form_operations/blob/7.x-1.x/data/discipline.txt -->
-        <value-pairs value-pairs-name= "discipline_types" dc-term ="discipline">
+        <value-pairs value-pairs-name= "discipline_types" dc-term ="type">
           <pair>
             <displayed-value>Anthropology</displayed-value>
             <stored-value>anthropology</stored-value>
