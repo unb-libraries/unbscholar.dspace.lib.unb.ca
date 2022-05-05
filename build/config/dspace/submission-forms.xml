@@ -276,6 +276,21 @@
             </row>
         </form>
 
+        <!-- Form which defines special steps for thesis submissions. -->
+        <form name="thesisStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Author</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
