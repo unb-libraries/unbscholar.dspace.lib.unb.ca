@@ -18,7 +18,8 @@
     <!-- for handle "default". -->
     <submission-map>
         <!-- Default submission process -->
-        <name-map collection-handle="default" submission-name="traditional"/>
+        <!-- <name-map collection-handle="default" submission-name="traditional"/> -->
+        <name-map collection-handle="default" submission-name="openAIREPublicationSubmission"/>
         <name-map collection-handle="123456789/67" submission-name="Publication"/>
         <name-map collection-handle="123456789/66" submission-name="Thesis"/>
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
