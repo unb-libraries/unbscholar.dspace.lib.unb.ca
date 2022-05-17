@@ -1493,10 +1493,6 @@
     <form-value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
-              <displayed-value>DOI</displayed-value>
-              <stored-value>doi</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>ISSN</displayed-value>
                 <stored-value>issn</stored-value>
             </pair>
@@ -1524,40 +1520,72 @@
 
         <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
-                <displayed-value>Article</displayed-value>
+                <displayed-value>journal article</displayed-value>
                 <stored-value>journal article</stored-value>
             </pair>
             <pair>
-                <displayed-value>Case Study</displayed-value>
-                <stored-value>report</stored-value>
+                <displayed-value>bibliography</displayed-value>
+                <stored-value>bibliography</stored-value>
             </pair>
             <pair>
-                <displayed-value>Evaluation Report</displayed-value>
-                <stored-value>report</stored-value>
+                <displayed-value>blog post</displayed-value>
+                <stored-value>blog post</stored-value>
             </pair>
             <pair>
-                <displayed-value>Report</displayed-value>
-                <stored-value>report</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Technical Report</displayed-value>
-                <stored-value>technical report</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Working Paper</displayed-value>
-                <stored-value>working paper</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Video</displayed-value>
-                <stored-value>video</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Book</displayed-value>
+                <displayed-value>book</displayed-value>
                 <stored-value>book</stored-value>
             </pair>
             <pair>
-                <displayed-value>Book Chapter</displayed-value>
+                <displayed-value>book part</displayed-value>
                 <stored-value>book part</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>report</displayed-value>
+                <stored-value>report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>conference proceedings</displayed-value>
+                <stored-value>conference proceedings</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>bachelor thesis</displayed-value>
+                <stored-value>bachelor thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>master thesis</displayed-value>
+                <stored-value>master thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>doctoral thesis</displayed-value>
+                <stored-value>doctoral thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>report</displayed-value>
+                <stored-value>report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>review</displayed-value>
+                <stored-value>review</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>video</displayed-value>
+                <stored-value>video</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>working paper</displayed-value>
+                <stored-value>working paper</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>annotation</displayed-value>
+                <stored-value>annotation</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>book review</displayed-value>
+                <stored-value>book review</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>other</displayed-value>
+                <stored-value>other</stored-value>
             </pair>
         </value-pairs>
 
