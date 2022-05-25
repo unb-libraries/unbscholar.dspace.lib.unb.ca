@@ -57,7 +57,7 @@ RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/m
   postfix start && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   $RSYNC_MOVE /build/config/dspace/ $DSPACE_INSTALL/config/ && \
-  $RSYNC_MOVE /build/scripts /scripts && \
+  $RSYNC_MOVE /build/scripts/ /scripts && \
   /scripts/add_xforward_tomcat.sh
 
 ENTRYPOINT ["/scripts/run.sh"]
