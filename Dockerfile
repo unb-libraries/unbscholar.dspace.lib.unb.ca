@@ -46,6 +46,8 @@ FROM tomcat:8-jdk11
 ENV DSPACE_INSTALL /dspace
 ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
 ENV JAVA_OPTS=-Xmx4096m
+ENV RSYNC_COPY "rsync -a --inplace --no-compress $RSYNC_FLAGS"
+ENV RSYNC_MOVE "$RSYNC_COPY --remove-source-files"
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
@@ -54,8 +56,8 @@ RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/m
   apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat postfix && rm -rf /var/lib/apt/lists/* && \
   postfix start && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
-  mv /build/config/dspace/* $DSPACE_INSTALL/config/ && \
-  mv /build/scripts /scripts && \
+  $RSYNC_MOVE /build/config/dspace/ $DSPACE_INSTALL/config/ && \
+  $RSYNC_MOVE /build/scripts /scripts && \
   /scripts/add_xforward_tomcat.sh
 
 ENTRYPOINT ["/scripts/run.sh"]
