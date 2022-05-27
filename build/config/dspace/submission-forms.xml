@@ -276,6 +276,261 @@
             </row>
         </form>
 
+        <!-- Form which defines the first section of the article submission process-->
+        <form name="articleStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Type</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>Select the type of content of the item.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the main title of the item.</hint>
+                    <required>You must enter a main title for this item.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dcterms</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Alternative Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>If the item has any alternative titles, please enter them here.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dcterms</dc-schema>
+                    <dc-element>bibliographicCitation</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Citation</label>
+                    <input-type>onebox</input-type>
+                    <hint>Please write the bibliographic citation for this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Abstract</label>
+                    <input-type>onebox</input-type>
+                    <hint>Please paste the abstract for this article here.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Rights Statement</label>
+                    <input-type>onebox</input-type>
+                    <hint>Please include the rights statement for this article. It may be helpful to check your publisher and journal's website.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Author(s)</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier>iso</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Language</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Select the language of the main content of the item. If the language does not appear in the
+                        list, please select 'Other'. If the content does not really have a language (for example, if it
+                        is a dataset or an image) please select 'N/A'.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+              <field>
+                  <dc-schema>dc</dc-schema>
+                  <dc-element>date</dc-element>
+                  <dc-qualifier>updated</dc-qualifier>
+                  <repeatable>false</repeatable>
+                  <style>col-sm-4</style>
+                  <label>Date Updated</label>
+                  <input-type>date</input-type>
+                  <hint>Date this item has been updated.</hint>
+                  <required></required>
+              </field>
+            </row>
+            <row>
+              <field>
+                  <dc-schema>dc</dc-schema>
+                  <dc-element>date</dc-element>
+                  <dc-qualifier>accessioned</dc-qualifier>
+                  <repeatable>false</repeatable>
+                  <style>col-sm-4</style>
+                  <label>Date Accessioned</label>
+                  <input-type>date</input-type>
+                  <hint>Date DSpace takes possession of item.</hint>
+                  <required></required>
+              </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>Identifiers</label>
+                    <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                    <hint>If the item has any identification numbers or codes associated with
+                        it, please enter the types and the actual numbers or codes.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>title</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Title of Journal, Book or Event</label>
+                    <input-type>onebox</input-type>
+                    <hint>Include the name of related item like the journal name, book title or event name.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>volume</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Volume</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the volume of the item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>issue</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Issue</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the issue number of the item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>startPage</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>First Page</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the start page number.</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>endPage</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Last Page</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the last page number.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publisher</label>
+                    <style>col-sm-8</style>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Date of Issue</label>
+                    <style>col-sm-4</style>
+                    <input-type>date</input-type>
+                    <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't applicable.
+                    </hint>
+                    <required>You must enter at least the year.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>discipline</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Discipline</label>
+                    <input-type value-pairs-name="discipline_types">dropdown</input-type>
+                    <hint>Select the discipline(s) for this item.</hint>
+                    <required>Please select at least one discipline.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>version</dc-element>
+                    <repeatable>false</repeatable>
+                    <label>Resource Version</label>
+                    <input-type value-pairs-name="openaire_version_types">dropdown</input-type>
+                    <hint>Select the version of the resource. If the resource does not have that information, please
+                        select "Not Applicable (or Unknown)".</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
         <!-- Form which defines special steps for thesis submissions. -->
         <form name="thesisStep">
 
@@ -1493,24 +1748,28 @@
     <form-value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
-                <displayed-value>ISSN</displayed-value>
-                <stored-value>issn</stored-value>
+              <displayed-value>URL</displayed-value>
+              <stored-value>url</stored-value>
             </pair>
             <pair>
-                <displayed-value>Other</displayed-value>
-                <stored-value>other</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>ISMN</displayed-value>
-                <stored-value>ismn</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Gov't Doc #</displayed-value>
-                <stored-value>govdoc</stored-value>
+                <displayed-value>DOI</displayed-value>
+                <stored-value>doi</stored-value>
             </pair>
             <pair>
                 <displayed-value>URI</displayed-value>
                 <stored-value>uri</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Pubmed Central ID</displayed-value>
+                <stored-value>pmc</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>OCLC Number</displayed-value>
+                <stored-value>oclc</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>ISSN</displayed-value>
+                <stored-value>issn</stored-value>
             </pair>
             <pair>
                 <displayed-value>ISBN</displayed-value>
