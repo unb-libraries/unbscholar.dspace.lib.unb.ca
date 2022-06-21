@@ -529,7 +529,121 @@
                     <required></required>
                 </field>
             </row>
+
+
+
+            <!-- Additions to accommodate other types of uploads-->
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>dcterms</dc-element>
+                    <dc-qualifier>references</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Related Dataset</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the URL/DOI of the related Dataset.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>conferencePlace</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Event/Conference Place</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the event location.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>conferenceDate</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Conference Date</label>
+                    <input-type>date</input-type>
+                    <hint>Enter the date of the event.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>citation</dc-element>
+                    <dc-qualifier>edition</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Edition</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the edition of the item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <repeatable>false</repeatable>
+                    <label>Access Type</label>
+                    <input-type value-pairs-name="openaire_rights">dropdown</input-type>
+                    <hint>Select the access type of the resource.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>oaire</dc-schema>
+                    <dc-element>license</dc-element>
+                    <dc-qualifier>condition</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>License</label>
+                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
+                    <hint>Select the license of the resource.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>coverage</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Coverage</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the coverage of the item, like a period, jurisdiction, etc.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Description</label>
+                    <input-type>textarea</input-type>
+                    <hint>Enter any other description or comments in this box.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of tag MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>Subject Keywords</label>
+                    <input-type>tag</input-type>
+                    <hint>Enter appropriate subject keywords or phrases.</hint>
+                    <required></required>
+                    <vocabulary>srsc</vocabulary>
+                </field>
+            </row>
         </form>
+
 
         <!-- Form which defines the first section of the thesis submission process-->
         <form name="thesisStep">
