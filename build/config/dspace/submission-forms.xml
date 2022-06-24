@@ -90,43 +90,6 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Type</label>
-                    <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type of content of the item.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-              <!-- replacing this with our own controlled vocabulary below, keeping this just in case.
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>discipline</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Discipline</label>
-                    <input-type>tag</input-type>
-                    <hint>Select the discipline for this item.</hint>
-                    <required></required>
-                    <vocabulary>srsc</vocabulary>
-                </field> -->
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>discipline</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Discipline</label>
-                    <input-type value-pairs-name="discipline_types">dropdown</input-type>
-                    <hint>Select the discipline(s) for this item.</hint>
-                    <required>Please select at least one discipline.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
@@ -138,19 +101,6 @@
                     </hint>
                     <required>You must enter at least the year.</required>
                 </field>
-
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>accessioned</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <style>col-sm-4</style>
-                    <label>Date Accessioned</label>
-                    <input-type>date</input-type>
-                    <hint>Date DSpace takes possession of item.</hint>
-                    <required></required>
-                </field>
-
 
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -203,7 +153,19 @@
                     <required></required>
                 </field>
             </row>
-
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Type</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>Select the type of content of the item.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -276,716 +238,6 @@
             </row>
         </form>
 
-        <!-- Form which defines the first section of the article submission process-->
-        <form name="articleStep">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Type</label>
-                    <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type of content of the item.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Title</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
-                    <required>You must enter a main title for this item.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dcterms</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier>alternative</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Alternative Title</label>
-                    <input-type>onebox</input-type>
-                    <hint>If the item has any alternative titles, please enter them here.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dcterms</dc-schema>
-                    <dc-element>bibliographicCitation</dc-element>
-                    <dc-qualifier>alternative</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Citation</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please write the bibliographic citation for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>abstract</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Abstract</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please paste the abstract for this article here.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Rights Statement</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please include the rights statement for this article. It may be helpful to check your publisher and journal's website.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Author(s)</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>language</dc-element>
-                    <dc-qualifier>iso</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Language</label>
-                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does not appear in the
-                        list, please select 'Other'. If the content does not really have a language (for example, if it
-                        is a dataset or an image) please select 'N/A'.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-              <field>
-                  <dc-schema>dc</dc-schema>
-                  <dc-element>date</dc-element>
-                  <dc-qualifier>updated</dc-qualifier>
-                  <repeatable>false</repeatable>
-                  <style>col-sm-4</style>
-                  <label>Date Updated</label>
-                  <input-type>date</input-type>
-                  <hint>Date this item has been updated.</hint>
-                  <required></required>
-              </field>
-            </row>
-            <row>
-              <field>
-                  <dc-schema>dc</dc-schema>
-                  <dc-element>date</dc-element>
-                  <dc-qualifier>accessioned</dc-qualifier>
-                  <repeatable>false</repeatable>
-                  <style>col-sm-4</style>
-                  <label>Date Accessioned</label>
-                  <input-type>date</input-type>
-                  <hint>Date DSpace takes possession of item.</hint>
-                  <required></required>
-              </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-                    <repeatable>true</repeatable>
-                    <label>Identifiers</label>
-                    <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                    <hint>If the item has any identification numbers or codes associated with
-                        it, please enter the types and the actual numbers or codes.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>title</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Title of Journal, Book or Event</label>
-                    <input-type>onebox</input-type>
-                    <hint>Include the name of related item like the journal name, book title or event name.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>volume</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Volume</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the volume of the item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>issue</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Issue</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the issue number of the item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>startPage</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>First Page</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the start page number.</hint>
-                    <required></required>
-                </field>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>endPage</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Last Page</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the last page number.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Publisher</label>
-                    <style>col-sm-8</style>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>issued</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Date of Issue</label>
-                    <style>col-sm-4</style>
-                    <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day and/or month if they aren't applicable.
-                    </hint>
-                    <required>You must enter at least the year.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>discipline</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Discipline</label>
-                    <input-type value-pairs-name="discipline_types">dropdown</input-type>
-                    <hint>Select the discipline(s) for this item.</hint>
-                    <required>Please select at least one discipline.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>version</dc-element>
-                    <repeatable>false</repeatable>
-                    <label>Resource Version</label>
-                    <input-type value-pairs-name="openaire_version_types">dropdown</input-type>
-                    <hint>Select the version of the resource. If the resource does not have that information, please
-                        select "Not Applicable (or Unknown)".</hint>
-                    <required></required>
-                </field>
-            </row>
-
-
-
-            <!-- Additions to accommodate other types of uploads-->
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>dcterms</dc-element>
-                    <dc-qualifier>references</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Related Dataset</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the URL/DOI of the related Dataset.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>conferencePlace</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Event/Conference Place</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the event location.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>conferenceDate</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Conference Date</label>
-                    <input-type>date</input-type>
-                    <hint>Enter the date of the event.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>citation</dc-element>
-                    <dc-qualifier>edition</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Edition</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the edition of the item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <repeatable>false</repeatable>
-                    <label>Access Type</label>
-                    <input-type value-pairs-name="openaire_rights">dropdown</input-type>
-                    <hint>Select the access type of the resource.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>oaire</dc-schema>
-                    <dc-element>license</dc-element>
-                    <dc-qualifier>condition</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>License</label>
-                    <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
-                    <hint>Select the license of the resource.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Coverage</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the coverage of the item, like a period, jurisdiction, etc.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Description</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter any other description or comments in this box.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of tag MUST be marked as repeatable -->
-                    <repeatable>true</repeatable>
-                    <label>Subject Keywords</label>
-                    <input-type>tag</input-type>
-                    <hint>Enter appropriate subject keywords or phrases.</hint>
-                    <required></required>
-                    <vocabulary>srsc</vocabulary>
-                </field>
-            </row>
-        </form>
-
-
-        <!-- Form which defines the first section of the thesis submission process-->
-        <form name="thesisStep">
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>level</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Degree Level</label>
-                    <style>col-sm-8</style>
-                    <input-type value-pairs-name="degree_level">dropdown</input-type>
-                    <hint>Select the level associated with this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Title</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
-                    <required>You must enter a main title for this item.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dcterms</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier>alternative</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Alternative Title</label>
-                    <input-type>onebox</input-type>
-                    <hint>If the item has any alternative titles, please enter them here.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>abstract</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Abstract</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please paste the abstract for this article here.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>rights</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Rights Statement</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please include the rights statement for this thesis.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Author</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>advisor</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Advisor</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the advisor's name (Family name, Given names).</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>committeeMember</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Committee Member</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the committee member's name (Family name, Given names).</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>issued</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Date of Issue</label>
-                    <style>col-sm-4</style>
-                    <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day and/or month if they aren't applicable.
-                    </hint>
-                    <required>You must enter at least the year.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>language</dc-element>
-                    <dc-qualifier>iso</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Language</label>
-                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does not appear in the
-                        list, please select 'Other'. If the content does not really have a language (for example, if it
-                        is a dataset or an image) please select 'N/A'.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>format</dc-element>
-                    <dc-qualifier>medium</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Medium</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>format</dc-element>
-                    <dc-qualifier>extent</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Extent</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>format</dc-element>
-                    <dc-qualifier>identifier</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Identifier</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>provenance</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Provenance</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-              <field>
-                  <dc-schema>dc</dc-schema>
-                  <dc-element>date</dc-element>
-                  <dc-qualifier>updated</dc-qualifier>
-                  <repeatable>false</repeatable>
-                  <style>col-sm-4</style>
-                  <label>Date Updated</label>
-                  <input-type>date</input-type>
-                  <hint>Date this item has been updated.</hint>
-                  <required></required>
-              </field>
-            </row>
-            <row>
-              <field>
-                  <dc-schema>dc</dc-schema>
-                  <dc-element>date</dc-element>
-                  <dc-qualifier>accessioned</dc-qualifier>
-                  <repeatable>false</repeatable>
-                  <style>col-sm-4</style>
-                  <label>Date Accessioned</label>
-                  <input-type>date</input-type>
-                  <hint>Date DSpace takes possession of item.</hint>
-                  <required></required>
-              </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>url</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>URL</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>uri</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>URI</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>oclc</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>OCLC</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>note</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Note</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>lcsh</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Library of Congress Subject Headings</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Library of Congress Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>csh</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Canadian Subject Headings</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the Canadian Subject Headings for this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier>classification</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Classification</label>
-                    <input-type>onebox</input-type>
-                    <hint>Catch-all for value from local classification system; global classification systems will receive specific qualifier.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>discipline</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Degree Discipline</label>
-                    <style>col-sm-8</style>
-                    <input-type value-pairs-name="discipline_types">dropdown</input-type>
-                    <hint>Select the discipline(s) associated with this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>name</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Degree Name</label>
-                    <style>col-sm-8</style>
-                    <input-type value-pairs-name="degree_name">dropdown</input-type>
-                    <hint>Select the degree name.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Publisher</label>
-                    <style>col-sm-8</style>
-                    <input-type value-pairs-name="unb">dropdown</input-type>
-                    <hint>Select the publisher of the item.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>grantor</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Degree Grantor</label>
-                    <style>col-sm-8</style>
-                    <input-type value-pairs-name="unb">dropdown</input-type>
-                    <hint>Select the grantor of the degree associated with this item.</hint>
-                    <required></required>
-                </field>
-            </row>
-        </form>
-
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
@@ -1021,8 +273,7 @@
                     <repeatable>false</repeatable>
                     <label>Title</label>
                     <input-type>onebox</input-type>
-                    <!-- <hint>Enter the main title of the item.</hint> -->
-                    <hint>This is a test to see if different forms are being used correctly.</hint>
+                    <hint>Enter the main title of the item.</hint>
                     <required>You must enter a main title for this item.</required>
                 </field>
             </row>
@@ -1264,6 +515,37 @@
 <!--                </field>-->
 <!--            </row>-->
             <row>
+                <relation-field>
+                    <relationship-type>isProjectOfPerson</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Investigator</label>
+                    <hint>Enter the investigator's name (Family name, Given names).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>project</dc-schema>
+                        <dc-element>investigator</dc-element>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                </relation-field>
+            </row>
+            <row>
+                <relation-field>
+                    <relationship-type>isProjectOfOrgUnit</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>false</repeatable>
+                    <label>Organization</label>
+                    <hint>Enter the organization's name</hint>
+                    <linked-metadata-field>
+                        <dc-schema>project</dc-schema>
+                        <dc-element>funder</dc-element>
+                        <dc-qualifier>name</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources/>
+                </relation-field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
@@ -1271,6 +553,39 @@
                     <label>Keywords</label>
                     <input-type>onebox</input-type>
                     <hint>Enter the keywords of the project</hint>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>project</dc-schema>
+                    <dc-element>startDate</dc-element>
+                    <label>Start date</label>
+                    <input-type>date</input-type>
+                    <hint>Enter the start date of the project</hint>
+                </field>
+                <field>
+                    <dc-schema>project</dc-schema>
+                    <dc-element>endDate</dc-element>
+                    <label>End date</label>
+                    <input-type>date</input-type>
+                    <hint>Enter the end date of the project</hint>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>project</dc-schema>
+                    <dc-element>amount</dc-element>
+                    <label>Amount</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the amount of the project</hint>
+                </field>
+                <field>
+                    <dc-schema>project</dc-schema>
+                    <dc-element>amount</dc-element>
+                    <dc-qualifier>currency</dc-qualifier>
+                    <label>Amount currency</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the amount currency of the project</hint>
                 </field>
             </row>
             <row>
@@ -2052,28 +1367,24 @@
     <form-value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
-              <displayed-value>URL</displayed-value>
-              <stored-value>url</stored-value>
+                <displayed-value>ISSN</displayed-value>
+                <stored-value>issn</stored-value>
             </pair>
             <pair>
-                <displayed-value>DOI</displayed-value>
-                <stored-value>doi</stored-value>
+                <displayed-value>Other</displayed-value>
+                <stored-value>other</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>ISMN</displayed-value>
+                <stored-value>ismn</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Gov't Doc #</displayed-value>
+                <stored-value>govdoc</stored-value>
             </pair>
             <pair>
                 <displayed-value>URI</displayed-value>
                 <stored-value>uri</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Pubmed Central ID</displayed-value>
-                <stored-value>pmc</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>OCLC Number</displayed-value>
-                <stored-value>oclc</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>ISSN</displayed-value>
-                <stored-value>issn</stored-value>
             </pair>
             <pair>
                 <displayed-value>ISBN</displayed-value>
@@ -2083,72 +1394,92 @@
 
         <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
-                <displayed-value>journal article</displayed-value>
-                <stored-value>journal article</stored-value>
+                <displayed-value>Animation</displayed-value>
+                <stored-value>Animation</stored-value>
             </pair>
             <pair>
-                <displayed-value>bibliography</displayed-value>
-                <stored-value>bibliography</stored-value>
+                <displayed-value>Article</displayed-value>
+                <stored-value>Article</stored-value>
             </pair>
             <pair>
-                <displayed-value>blog post</displayed-value>
-                <stored-value>blog post</stored-value>
+                <displayed-value>Book</displayed-value>
+                <stored-value>Book</stored-value>
             </pair>
             <pair>
-                <displayed-value>book</displayed-value>
-                <stored-value>book</stored-value>
+                <displayed-value>Book chapter</displayed-value>
+                <stored-value>Book chapter</stored-value>
             </pair>
             <pair>
-                <displayed-value>book part</displayed-value>
-                <stored-value>book part</stored-value>
+                <displayed-value>Dataset</displayed-value>
+                <stored-value>Dataset</stored-value>
             </pair>
             <pair>
-                <displayed-value>report</displayed-value>
-                <stored-value>report</stored-value>
+                <displayed-value>Learning Object</displayed-value>
+                <stored-value>Learning Object</stored-value>
             </pair>
             <pair>
-                <displayed-value>conference proceedings</displayed-value>
-                <stored-value>conference proceedings</stored-value>
+                <displayed-value>Image</displayed-value>
+                <stored-value>Image</stored-value>
             </pair>
             <pair>
-                <displayed-value>bachelor thesis</displayed-value>
-                <stored-value>bachelor thesis</stored-value>
+                <displayed-value>Image, 3-D</displayed-value>
+                <stored-value>Image, 3-D</stored-value>
             </pair>
             <pair>
-                <displayed-value>master thesis</displayed-value>
-                <stored-value>master thesis</stored-value>
+                <displayed-value>Map</displayed-value>
+                <stored-value>Map</stored-value>
             </pair>
             <pair>
-                <displayed-value>doctoral thesis</displayed-value>
-                <stored-value>doctoral thesis</stored-value>
+                <displayed-value>Musical Score</displayed-value>
+                <stored-value>Musical Score</stored-value>
             </pair>
             <pair>
-                <displayed-value>report</displayed-value>
-                <stored-value>report</stored-value>
+                <displayed-value>Plan or blueprint</displayed-value>
+                <stored-value>Plan or blueprint</stored-value>
             </pair>
             <pair>
-                <displayed-value>review</displayed-value>
-                <stored-value>review</stored-value>
+                <displayed-value>Preprint</displayed-value>
+                <stored-value>Preprint</stored-value>
             </pair>
             <pair>
-                <displayed-value>video</displayed-value>
-                <stored-value>video</stored-value>
+                <displayed-value>Presentation</displayed-value>
+                <stored-value>Presentation</stored-value>
             </pair>
             <pair>
-                <displayed-value>working paper</displayed-value>
-                <stored-value>working paper</stored-value>
+                <displayed-value>Recording, acoustical</displayed-value>
+                <stored-value>Recording, acoustical</stored-value>
             </pair>
             <pair>
-                <displayed-value>annotation</displayed-value>
-                <stored-value>annotation</stored-value>
+                <displayed-value>Recording, musical</displayed-value>
+                <stored-value>Recording, musical</stored-value>
             </pair>
             <pair>
-                <displayed-value>book review</displayed-value>
-                <stored-value>book review</stored-value>
+                <displayed-value>Recording, oral</displayed-value>
+                <stored-value>Recording, oral</stored-value>
             </pair>
             <pair>
-                <displayed-value>other</displayed-value>
-                <stored-value>other</stored-value>
+                <displayed-value>Software</displayed-value>
+                <stored-value>Software</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Technical Report</displayed-value>
+                <stored-value>Technical Report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Thesis</displayed-value>
+                <stored-value>Thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Video</displayed-value>
+                <stored-value>Video</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Working Paper</displayed-value>
+                <stored-value>Working Paper</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Other</displayed-value>
+                <stored-value>Other</stored-value>
             </pair>
         </value-pairs>
 
@@ -2204,301 +1535,6 @@
                 <displayed-value>(Other)</displayed-value>
                 <stored-value>other</stored-value>
             </pair>
-        </value-pairs>
-
-        <!-- Theses specific value pairs -->
-
-        <value-pairs value-pairs-name="unb" dc-term="publisher">
-            <pair>
-                <displayed-value>University of New Brunswick</displayed-value>
-                <stored-value>UNB</stored-value>
-            </pair>
-        </value-pairs>
-
-        <value-pairs value-pairs-name="degree_level" dc-term="type">
-            <pair>
-                <displayed-value>Doctorate</displayed-value>
-                <stored-value>doctorate</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Masters</displayed-value>
-                <stored-value>masters</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Bachelors</displayed-value>
-                <stored-value>bachelors</stored-value>
-            </pair>
-        </value-pairs>
-
-        <value-pairs value-pairs-name="degree_name" dc-term="type">
-            <pair>
-                <displayed-value>M.A.</displayed-value>
-                <stored-value>M.A.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.A.S.R.C.</displayed-value>
-                <stored-value>M.A.S.R.C.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.A.H.S.R.</displayed-value>
-                <stored-value>M.A.H.S.R.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.B.A.</displayed-value>
-                <stored-value>M.B.A.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.C.S.</displayed-value>
-                <stored-value>M.C.S.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.C.S.C.</displayed-value>
-                <stored-value>M.C.S.C.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.E.M.</displayed-value>
-                <stored-value>M.E.M.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Ed.</displayed-value>
-                <stored-value>M.Ed.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Eng.</displayed-value>
-                <stored-value>M.Eng.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.F.</displayed-value>
-                <stored-value>M.F.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.F.E.</displayed-value>
-                <stored-value>M.F.E.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.IDST.</displayed-value>
-                <stored-value>M.IDST.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.N.</displayed-value>
-                <stored-value>M.N.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Phil.</displayed-value>
-                <stored-value>M.Phil.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Sc.</displayed-value>
-                <stored-value>M.Sc.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Sc.E.</displayed-value>
-                <stored-value>M.Sc.E.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Sc.E.M.</displayed-value>
-                <stored-value>M.Sc.E.M.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Sc.F.</displayed-value>
-                <stored-value>M.Sc.F.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>M.Sc.F.E.</displayed-value>
-                <stored-value>M.Sc.F.E.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Ph.D.</displayed-value>
-                <stored-value>Ph.D.</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Ph.D.IDST.</displayed-value>
-                <stored-value>Ph.D.IDST.</stored-value>
-            </pair>
-        </value-pairs>
-
-        <!-- Discipline controlled vocabulary based on https://github.com/unb-libraries/unbscholar_islandora_form_operations/blob/7.x-1.x/data/discipline.txt -->
-        <value-pairs value-pairs-name= "discipline_types" dc-term ="type">
-          <pair>
-            <displayed-value>Anthropology</displayed-value>
-            <stored-value>anthropology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Applied Health Services Research</displayed-value>
-            <stored-value>applied health services research</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Archaeology</displayed-value>
-            <stored-value>archaeology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Biology</displayed-value>
-            <stored-value>biology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Business Administration</displayed-value>
-            <stored-value>business administration</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Chemical Engineering</displayed-value>
-            <stored-value>chemical engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Chemistry</displayed-value>
-            <stored-value>chemistry</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Civil Engineering</displayed-value>
-            <stored-value>civil engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Classics &amp; Ancient History</displayed-value>
-            <stored-value>classics and ancient history</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Computer Science</displayed-value>
-            <stored-value>computer science</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Creative Writing</displayed-value>
-            <stored-value>creative writing</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Culture and Language Studies</displayed-value>
-            <stored-value>culture and language studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Drama</displayed-value>
-            <stored-value>drama</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Earth Sciences</displayed-value>
-            <stored-value>earth sciences</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Economics</displayed-value>
-            <stored-value>economics</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Education</displayed-value>
-            <stored-value>education</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Electrical &amp; Computer Engineering</displayed-value>
-            <stored-value>electrical and computer engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Electrical Engineering</displayed-value>
-            <stored-value>electrical engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>English</displayed-value>
-            <stored-value>english</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Forest Engineering</displayed-value>
-            <stored-value>forest engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Forestry &amp; Environmental Management</displayed-value>
-            <stored-value>forestry and enviromental management</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>French</displayed-value>
-            <stored-value>french</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Gender &amp; Women's Studies</displayed-value>
-            <stored-value>gender and women's studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Geodesy &amp; Geomatics</displayed-value>
-            <stored-value>geodesy and geomatics</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Geological Engineering</displayed-value>
-            <stored-value>geological engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Health Services Research (Applied)</displayed-value>
-            <stored-value>health services research (applied)</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>History</displayed-value>
-            <stored-value>history</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Interdisciplinary Studies</displayed-value>
-            <stored-value>interdisciplinary studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>International Development Studies</displayed-value>
-            <stored-value>international development studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Kinesiology</displayed-value>
-            <stored-value>kinesiology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Law</displayed-value>
-            <stored-value>law</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Library and Information Science</displayed-value>
-            <stored-value>library and information science</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Mathematics &amp; Statistics</displayed-value>
-            <stored-value>mathematics and statistics</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Mechanical Engineering</displayed-value>
-            <stored-value>mechanical engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Multimedia Studies</displayed-value>
-            <stored-value>multimedia studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Nursing</displayed-value>
-            <stored-value>nursing</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Philosophy</displayed-value>
-            <stored-value>philosophy</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Physics</displayed-value>
-            <stored-value>physics</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Policy Studies</displayed-value>
-            <stored-value>policy studies</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Political Science</displayed-value>
-            <stored-value>political science</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Psychology</displayed-value>
-            <stored-value>psychology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Sociology</displayed-value>
-            <stored-value>sociology</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Software Engineering</displayed-value>
-            <stored-value>software engineering</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Technology Management Entrepreneurship</displayed-value>
-            <stored-value>technology management entrepreneurship</stored-value>
-          </pair>
-          <pair>
-            <displayed-value>Other</displayed-value>
-            <stored-value>other</stored-value>
-          </pair>
         </value-pairs>
 
         <!-- OpenAIRE specific value pairs -->
