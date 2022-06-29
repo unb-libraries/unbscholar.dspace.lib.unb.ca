@@ -825,23 +825,18 @@
                     <required></required>
                 </field>
             </row>
+              <!-- replaced entity version of this with the regular author field -->
             <row>
-                <relation-field>
-                    <relationship-type>isAuthorOfPublication</relationship-type>
-                    <search-configuration>personOrOrgunit</search-configuration>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <name-variants>true</name-variants>
                     <label>Author</label>
-                    <hint>Add an author</hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>author</dc-qualifier>
-                        <input-type>name</input-type>
-                    </linked-metadata-field>
-                    <externalsources>orcid</externalsources>
-                    <required>At least one author (plain text or relationship) is required</required>
-                </relation-field>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <required></required>
+                </field>
             </row>
 
             <!-- EDITOR and Other contributors - Add new field here -->
@@ -862,6 +857,7 @@
                     <required>You must enter at least the year.</required>
                 </field>
             </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -875,6 +871,8 @@
                     <required></required>
                 </field>
             </row>
+
+            <!-- Relationships
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -899,6 +897,7 @@
                     <required></required>
                 </field>
             </row>
+             -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1095,6 +1094,7 @@
                     <required></required>
                 </field>
             </row>
+              <!-- Relationships
             <row>
                 <relation-field>
                     <relationship-type>isProjectOfPublication</relationship-type>
@@ -1112,6 +1112,7 @@
                     <required></required>
                 </relation-field>
             </row>
+          -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>

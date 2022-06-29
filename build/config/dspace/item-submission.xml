@@ -267,7 +267,6 @@
             <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
             <step id="publicationStep"/>
             <step id="traditionalpagetwo"/>
-            <step id="itemAccessConditions"/>
             <step id="upload"/>
             <step id="license"/>
         </submission-process>
@@ -345,6 +344,7 @@
             <!--Step will be to Describe the item. -->
             <step id="openAIREPublicationPageoneForm"/>
             <step id="openAIREPublicationPagetwoForm"/>
+            <step id="itemAccessConditions"/>
 
             <!--Step will be to Upload the item -->
             <!-- step id="upload-with-embargo"/-->
