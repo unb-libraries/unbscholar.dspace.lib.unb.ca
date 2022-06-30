@@ -245,16 +245,25 @@
              Publication Entity to a Person Entity. -->
         <form name="publicationStep">
             <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
                     <label>Author</label>
-                    <input-type>onebox</input-type>
                     <hint>Enter the author's name (Family name, Given names).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
                     <required></required>
-                </field>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
             </row>
             <row>
                 <field>
@@ -316,6 +325,18 @@
                     <label>Citation</label>
                     <input-type>onebox</input-type>
                     <hint>Enter the standard citation for the previously issued instance of this item.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>relation</dc-element>
+                    <dc-qualifier>ispartofseries</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Series/Report No.</label>
+                    <input-type>series</input-type>
+                    <hint>Enter the series and number assigned to this item by your community.</hint>
                     <required></required>
                 </field>
             </row>
@@ -825,18 +846,23 @@
                     <required></required>
                 </field>
             </row>
-              <!-- replaced entity version of this with the regular author field -->
             <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
+                    <name-variants>true</name-variants>
                     <label>Author</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
-                    <required></required>
-                </field>
+                    <hint>Add an author</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>name</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required>At least one author (plain text or relationship) is required</required>
+                </relation-field>
             </row>
 
             <!-- EDITOR and Other contributors - Add new field here -->
@@ -857,7 +883,6 @@
                     <required>You must enter at least the year.</required>
                 </field>
             </row>
-
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -871,8 +896,6 @@
                     <required></required>
                 </field>
             </row>
-
-            <!-- Relationships
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -897,7 +920,6 @@
                     <required></required>
                 </field>
             </row>
-             -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1094,7 +1116,6 @@
                     <required></required>
                 </field>
             </row>
-              <!-- Relationships
             <row>
                 <relation-field>
                     <relationship-type>isProjectOfPublication</relationship-type>
@@ -1112,7 +1133,6 @@
                     <required></required>
                 </relation-field>
             </row>
-          -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
