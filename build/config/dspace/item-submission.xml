@@ -346,7 +346,7 @@
             <step id="openAIREPublicationPagetwoForm"/>
 
             <!--Step will be to Upload the item -->
-            <step id="upload-with-embargo"/>
+            <!-- step id="upload-with-embargo"/-->
             <step id="upload"/>
 
             <!--Step will be to Sign off on the License -->
