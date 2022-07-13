@@ -213,6 +213,128 @@
             </row>
         </form>
 
+        <!-- form used for student deposits -->
+        <form name="studentDepositStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>advisor</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Advisor(s)</label>
+                    <input-type>onebox</input-type>
+                    <hint>Add an advisor.</hint>
+                    <required></required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publisher</label>
+                    <input-type value-pairs-name="unb">dropdown</input-type>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+                    <required>Please select the publisher.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>format</dc-element>
+                    <dc-qualifier>extent</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Extent</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the extent of the item.</hint>
+                    <required></required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>format</dc-element>
+                    <dc-qualifier>medium</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Format</label>
+                    <input-type value-pairs-name="student_deposit_format">dropdown</input-type>
+                    <hint>Select the format of the item.</hint>
+                    <required></required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Type</label>
+                    <input-type value-pairs-name="student_deposit_types">dropdown</input-type>
+                    <hint>Select the type of the item.</hint>
+                    <required>Please select the type of item you wish to deposit.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>Subjects</label>
+                    <input-type value-pairs-name="student_deposit_headings">qualdrop_value</input-type>
+                    <hint>If the item has any special subject headings please select the type and enter them.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>
+
+            <row>
+              <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Thesis Number</label>
+                    <input-type>onebox</input-type>
+                    <hint>If the item has a Thesis Number as assigned by Archives & Special Collections, please include that here. </hint>
+                    <required></required>
+              </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>provenance</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Provenance</label>
+                    <input-type>textarea</input-type>
+                    <hint></hint>
+                    <required></required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>note</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Note</label>
+                    <input-type>textarea</input-type>
+                    <hint>Notes for this deposit.</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
 
         <!-- Form which defines the first page/section of the "traditional" DSpace submission process,
              often used when depositing normal Items (i.e. Items which are not Entities). -->
