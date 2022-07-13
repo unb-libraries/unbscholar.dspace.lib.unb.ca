@@ -303,7 +303,7 @@
                     <repeatable>false</repeatable>
                     <label>Thesis Number</label>
                     <input-type>onebox</input-type>
-                    <hint>If the item has a Thesis Number as assigned by Archives & Special Collections, please include that here. </hint>
+                    <hint>If the item has a Thesis Number as assigned by Archives and Special Collections, please include that here. </hint>
                     <required></required>
               </field>
             </row>
