@@ -335,6 +335,64 @@
             </row>
         </form>
 
+        <!-- Form containing information about degrees -->
+        <form name="degreeInfoStep">
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>name</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Name</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="degree_name">dropdown</input-type>
+                    <hint>Select the degree name.</hint>
+                    <required>Please select a degree name.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>discipline</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Discipline</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="discipline_types">dropdown</input-type>
+                    <hint>Select the discipline(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
+                    <required>Please select a discipline.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>level</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Level</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="degree_level">dropdown</input-type>
+                    <hint></hint>
+                    <required>Please select the degree level.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>thesis</dc-schema>
+                    <dc-element>degree</dc-element>
+                    <dc-qualifier>grantor</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Degree Grantor</label>
+                    <style>col-sm-8</style>
+                    <input-type value-pairs-name="unb">dropdown</input-type>
+                    <hint></hint>
+                    <required>Please select the degree grantor.</required>
+                </field>
+            </row>
+        </form>
 
         <!-- Form which defines the first page/section of the "traditional" DSpace submission process,
              often used when depositing normal Items (i.e. Items which are not Entities). -->
