@@ -1365,6 +1365,352 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+
+        <value-pairs value-pairs-name="unb" dc-term="publisher">
+            <pair>
+                <displayed-value>University of New Brunswick</displayed-value>
+                <stored-value>University of New Brunswick</stored-value>
+            </pair>
+        </value-pairs>
+
+        <!-- Discipline controlled vocabulary based on https://github.com/unb-libraries/unbscholar_islandora_form_operations/blob/7.x-1.x/data/discipline.txt -->
+        <value-pairs value-pairs-name= "discipline_types" dc-term ="type">
+          <pair>
+            <displayed-value>Anthropology</displayed-value>
+            <stored-value>anthropology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Applied Health Services Research</displayed-value>
+            <stored-value>applied health services research</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Archaeology</displayed-value>
+            <stored-value>archaeology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Biology</displayed-value>
+            <stored-value>biology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Business Administration</displayed-value>
+            <stored-value>business administration</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Chemical Engineering</displayed-value>
+            <stored-value>chemical engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Chemistry</displayed-value>
+            <stored-value>chemistry</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Civil Engineering</displayed-value>
+            <stored-value>civil engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Classics &amp; Ancient History</displayed-value>
+            <stored-value>classics and ancient history</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Computer Science</displayed-value>
+            <stored-value>computer science</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Creative Writing</displayed-value>
+            <stored-value>creative writing</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Culture and Language Studies</displayed-value>
+            <stored-value>culture and language studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Drama</displayed-value>
+            <stored-value>drama</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Earth Sciences</displayed-value>
+            <stored-value>earth sciences</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Economics</displayed-value>
+            <stored-value>economics</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Education</displayed-value>
+            <stored-value>education</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Electrical &amp; Computer Engineering</displayed-value>
+            <stored-value>electrical and computer engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Electrical Engineering</displayed-value>
+            <stored-value>electrical engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>English</displayed-value>
+            <stored-value>english</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Forest Engineering</displayed-value>
+            <stored-value>forest engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Forestry &amp; Environmental Management</displayed-value>
+            <stored-value>forestry and enviromental management</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>French</displayed-value>
+            <stored-value>french</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Gender &amp; Women's Studies</displayed-value>
+            <stored-value>gender and women's studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Geodesy &amp; Geomatics</displayed-value>
+            <stored-value>geodesy and geomatics</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Geological Engineering</displayed-value>
+            <stored-value>geological engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Health Services Research (Applied)</displayed-value>
+            <stored-value>health services research (applied)</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>History</displayed-value>
+            <stored-value>history</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Interdisciplinary Studies</displayed-value>
+            <stored-value>interdisciplinary studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>International Development Studies</displayed-value>
+            <stored-value>international development studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Kinesiology</displayed-value>
+            <stored-value>kinesiology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Law</displayed-value>
+            <stored-value>law</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Library and Information Science</displayed-value>
+            <stored-value>library and information science</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Mathematics &amp; Statistics</displayed-value>
+            <stored-value>mathematics and statistics</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Mechanical Engineering</displayed-value>
+            <stored-value>mechanical engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Multimedia Studies</displayed-value>
+            <stored-value>multimedia studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Nursing</displayed-value>
+            <stored-value>nursing</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Philosophy</displayed-value>
+            <stored-value>philosophy</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Physics</displayed-value>
+            <stored-value>physics</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Policy Studies</displayed-value>
+            <stored-value>policy studies</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Political Science</displayed-value>
+            <stored-value>political science</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Psychology</displayed-value>
+            <stored-value>psychology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Sociology</displayed-value>
+            <stored-value>sociology</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Software Engineering</displayed-value>
+            <stored-value>software engineering</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Technology Management Entrepreneurship</displayed-value>
+            <stored-value>technology management entrepreneurship</stored-value>
+          </pair>
+          <pair>
+            <displayed-value>Other</displayed-value>
+            <stored-value>other</stored-value>
+          </pair>
+        </value-pairs>
+
+        <!-- Custom document types to accommodate student work, thesis types based on OpenAIRE document types
+             https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/field_publicationtype.html
+             Based on COAR Vocabularies -> Controlled Vocabulary for Resource Type Genres (Version 2.0):
+             http://vocabularies.coar-repositories.org/documentation/resource_types/
+
+						 Values for "reports" are custom. -->
+        <value-pairs value-pairs-name="student_deposit_types" dc-term="type">
+            <pair>
+                <displayed-value>- Thesis</displayed-value>
+                <stored-value>thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Bachelor Thesis</displayed-value>
+                <stored-value>bachelor thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Doctoral Thesis</displayed-value>
+                <stored-value>doctoral thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Master Thesis</displayed-value>
+                <stored-value>master thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>- Report</displayed-value>
+                <stored-value>report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Master Report</displayed-value>
+                <stored-value>master report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Senior Report</displayed-value>
+                <stored-value>senior report</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>-- Nursing Synthesis Paper</displayed-value>
+                <stored-value>nursing synthesis paper</stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="degree_name" dc-term="type">
+            <pair>
+                <displayed-value>M.A.</displayed-value>
+                <stored-value>M.A.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.A.S.R.C.</displayed-value>
+                <stored-value>M.A.S.R.C.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.A.H.S.R.</displayed-value>
+                <stored-value>M.A.H.S.R.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.B.A.</displayed-value>
+                <stored-value>M.B.A.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.C.S.</displayed-value>
+                <stored-value>M.C.S.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.C.S.C.</displayed-value>
+                <stored-value>M.C.S.C.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.E.M.</displayed-value>
+                <stored-value>M.E.M.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Ed.</displayed-value>
+                <stored-value>M.Ed.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Eng.</displayed-value>
+                <stored-value>M.Eng.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.F.</displayed-value>
+                <stored-value>M.F.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.F.E.</displayed-value>
+                <stored-value>M.F.E.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.IDST.</displayed-value>
+                <stored-value>M.IDST.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.N.</displayed-value>
+                <stored-value>M.N.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Phil.</displayed-value>
+                <stored-value>M.Phil.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Sc.</displayed-value>
+                <stored-value>M.Sc.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Sc.E.</displayed-value>
+                <stored-value>M.Sc.E.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Sc.E.M.</displayed-value>
+                <stored-value>M.Sc.E.M.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Sc.F.</displayed-value>
+                <stored-value>M.Sc.F.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.Sc.F.E.</displayed-value>
+                <stored-value>M.Sc.F.E.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ph.D.</displayed-value>
+                <stored-value>Ph.D.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ph.D.IDST.</displayed-value>
+                <stored-value>Ph.D.IDST.</stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="degree_level" dc-term="type">
+            <pair>
+                <displayed-value>Doctorate</displayed-value>
+                <stored-value>doctorate</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Masters</displayed-value>
+                <stored-value>masters</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Bachelors</displayed-value>
+                <stored-value>bachelors</stored-value>
+            </pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="student_deposit_format" dc-term="type">
+            <pair>
+                <displayed-value>Electronic Thesis</displayed-value>
+                <stored-value>electronic</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Print Thesis</displayed-value>
+                <stored-value>print</stored-value>
+            </pair>
+        </value-pairs>
+
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>
