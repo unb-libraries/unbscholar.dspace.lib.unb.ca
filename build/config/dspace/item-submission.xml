@@ -20,6 +20,8 @@
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="openAIREPublicationSubmission"/>
 
+        <name-map collection-handle="123456789/2551" submission-name="StudentDeposits"/>
+
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
              This sets up the following Entity-based Collections in that dataset:
@@ -82,8 +84,33 @@
             <scope visibility="hidden" visibilityOutside="hidden">submission</scope>
         </step-definition>
 
+        <!-- The following set of DescribeStep <step-definition>s are custom made for our forms. -->
+
+        <step-definition id="itemStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="studentDepositStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="degreeInfoStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="localCustomStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+
         <!-- The following set of DescribeStep <step-definition>s all point to forms (of the same name) which are
              defined in submission-forms.xml -->
+
         <step-definition id="traditionalpageone" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -226,6 +253,17 @@
     <!-- -->
     <!-- -->
     <submission-definitions>
+
+        <!--Submission Process for student deposits.-->
+        <submission-process name="StudentDeposits">
+            <step id="collection"/>
+            <step id="itemStep"/>
+            <step id="studentDepositStep"/>
+            <step id="degreeInfoStep"/>
+            <step id="localCustomStep"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
         <submission-process name="traditional">
