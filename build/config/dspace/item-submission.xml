@@ -18,9 +18,13 @@
     <!-- for handle "default". -->
     <submission-map>
         <!-- Default submission process -->
-        <name-map collection-handle="default" submission-name="openAIREPublicationSubmission"/>
+        <name-map collection-handle="default" submission-name="FacultyAndStaffDeposit"/>
 
-        <name-map collection-handle="123456789/2551" submission-name="StudentDeposits"/>
+        <!-- Graduate Research -->
+        <name-map collection-handle="123456789/59" submission-name="StudentDeposits"/>
+
+        <!-- Undergraduate Research -->
+        <name-map collection-handle="123456789/62" submission-name="StudentDeposits"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -264,6 +268,18 @@
             <step id="upload"/>
             <step id="license"/>
         </submission-process>
+
+        <!-- Faculty and staff submission processes -->
+        <submission-process name="FacultyAndStaffDeposit">
+            <step id="collection"/>
+            <step id="openAIREPublicationPageoneForm"/>
+            <step id="openAIREPublicationPagetwoForm"/>
+            <step id="localCustomStep"/>
+            <step id="upload"/>
+            <step id="license"/>
+        </submission-process>
+
+
 
         <!--This "traditional" process defines the DEFAULT item submission process -->
         <submission-process name="traditional">
