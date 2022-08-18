@@ -26,12 +26,6 @@
         <!-- Undergraduate Research -->
         <name-map collection-handle="123456789/62" submission-name="StudentDeposits"/>
 
-        <!-- Organization -->
-        <name-map collection-handle="1882/3391" submission-name="openAIREOrganizationSubmission"/>
-
-        <!-- Project -->
-        <name-map collection-handle="1882/3392" submission-name="openAIREProjectSubmission"/>
-
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
              This sets up the following Entity-based Collections in that dataset:
