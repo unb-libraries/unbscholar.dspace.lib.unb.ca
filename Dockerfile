@@ -54,7 +54,7 @@ COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
 
 RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/main.cf && \
-  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat postfix rsync && rm -rf /var/lib/apt/lists/* && \
+  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat postfix rsync unzip && rm -rf /var/lib/apt/lists/* && \
   postfix start && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   $RSYNC_MOVE /build/config/dspace/ $DSPACE_INSTALL/config/ && \
