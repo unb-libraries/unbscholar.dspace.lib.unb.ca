@@ -7,7 +7,7 @@ mkdir ${AIPDIR} /dspace/upload
 cd "${AIPDIR}" || exit
 pwd
 curl ${AIPZIP} -L -s --output aip.zip
-unzip aip.zip
+gunzip -S .zip aip.zip
 cd "${AIPDIR}" || exit
 ${DSPACE_BIN} packager -r -a -t AIP -e "${DSPACE_ADMIN_EMAIL}" -f -u SITE*.zip
 ${DSPACE_BIN} database update-sequences
