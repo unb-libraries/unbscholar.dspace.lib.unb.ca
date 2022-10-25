@@ -14,6 +14,9 @@ dockworker:
     local:
       localhost_hostnames:
         - unbscholar.dspace.lib.unb.ca
+    workflow:
+      source: dockworker
+      type: deployment-workflow
   github:
     repo: unbscholar.dspace.lib.unb.ca
     owner: unb-libraries
