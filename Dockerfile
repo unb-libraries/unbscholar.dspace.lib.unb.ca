@@ -45,7 +45,7 @@ FROM tomcat:9-jdk11
 
 ENV DSPACE_INSTALL /dspace
 ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
-ENV JAVA_OPTS=-Xmx4096m
+ENV JAVA_OPTS -Xmx4096m -Dfile.encoding=UTF-8
 ENV RSYNC_COPY "rsync -a --inplace --no-compress $RSYNC_FLAGS"
 ENV RSYNC_MOVE "$RSYNC_COPY --remove-source-files"
 
