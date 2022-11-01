@@ -42,7 +42,7 @@ RUN apt-get update && apt-get install wget && \
 
 
 # Deployment Image
-FROM tomcat:8-jdk11
+FROM tomcat:9-jdk11
 
 ENV DSPACE_INSTALL /dspace
 ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
