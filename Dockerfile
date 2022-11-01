@@ -5,12 +5,11 @@ ARG TARGET_DIR=dspace-installer
 ARG DSPACE_REFSPEC=dspace-7.4
 
 WORKDIR /app
+RUN useradd dspace && \
+  mkdir /home/dspace && \
+  chown -Rv dspace: /home/dspace
 
-RUN useradd dspace \
-  && mkdir /home/dspace \
-  && chown -Rv dspace: /home/dspace
-
-RUN apt-get update && apt-get install git rsync && \
+RUN apt-get update && apt-get install -y --no-install-recommends git rsync && \
   git clone --depth 1 --branch ${DSPACE_REFSPEC} https://github.com/DSpace/DSpace.git /tmpDSpace && \
   rsync -a /tmpDSpace/ /app/
 
@@ -35,7 +34,7 @@ ENV ANT_VERSION 1.10.9
 ENV ANT_HOME /tmp/ant-$ANT_VERSION
 ENV PATH $ANT_HOME/bin:$PATH
 
-RUN apt-get update && apt-get install wget && \
+RUN apt-get update && apt-get install -y --no-install-recommends wget && \
   mkdir $ANT_HOME && \
   wget -qO- "https://archive.apache.org/dist/ant/binaries/apache-ant-$ANT_VERSION-bin.tar.gz" | tar -zx --strip-components=1 -C $ANT_HOME && \
   ant init_installation update_configs update_code update_webapps
