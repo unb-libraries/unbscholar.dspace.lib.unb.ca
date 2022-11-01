@@ -20,13 +20,13 @@ RUN mkdir /install && \
   chown -Rv dspace: /app
 
 USER dspace
-RUN mvn package && \
+RUN mvn --no-transfer-progress package&& \
   mv /app/dspace/target/${TARGET_DIR}/* /install && \
   mvn clean
 
 
 # Ant Commands.
-FROM tomcat:8-jdk11 as ant_build
+FROM openjdk:11-slim as ant_build
 ARG TARGET_DIR=dspace-installer
 COPY --from=build /install /dspace-src
 WORKDIR /dspace-src
