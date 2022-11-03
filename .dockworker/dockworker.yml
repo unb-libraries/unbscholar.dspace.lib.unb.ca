@@ -4,6 +4,7 @@ dockworker:
     name: unbscholar.dspace.lib.unb.ca
     finish_marker: 'Server startup in'
     project_prefix: SCHOLAR
+    shell: /bin/bash
     upstream_images:
       - maven:3-jdk-8-alpine
       - tomcat:8-jre8
