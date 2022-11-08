@@ -121,6 +121,9 @@ spec:
             -
               mountPath: /dspace/assetstore
               name: dspace-persistent-storage
+            -
+              mountPath: /dspace/handle-server
+              name: dspace-handle-persistent-storage
       priorityClassName: high-priority-services
       imagePullSecrets:
         -
@@ -131,3 +134,7 @@ spec:
           name: dspace-persistent-storage
           persistentVolumeClaim:
             claimName: unbscholar-dspace-lib-unb-ca
+        -
+          name: dspace-handle-persistent-storage
+          persistentVolumeClaim:
+            claimName: handle-unbscholar-dspace-lib-unb-ca
