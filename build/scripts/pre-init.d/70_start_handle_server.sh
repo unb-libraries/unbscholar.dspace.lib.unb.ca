@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
-if [ "$DEPLOY_ENV" != "local" ]; then
-  # Disable until handle enables account
-  # ${DSPACE_INSTALL}/bin/start-handle-server
-  echo "Handle server disabled temporarily."
+if [ "$DEPLOY_ENV" = "prod" ]; then
+  echo "Starting handle server..."
+  ${DSPACE_INSTALL}/bin/start-handle-server
 fi
