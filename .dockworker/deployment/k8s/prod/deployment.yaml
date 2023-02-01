@@ -115,8 +115,8 @@ spec:
           image: "||DEPLOYMENTIMAGE||"
           imagePullPolicy: Always
           ports:
-            -
-              containerPort: 8009
+            - containerPort: 8009
+            - containerPort: 8000
           volumeMounts:
             -
               mountPath: /dspace/assetstore
