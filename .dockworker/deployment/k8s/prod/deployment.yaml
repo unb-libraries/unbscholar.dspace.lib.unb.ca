@@ -42,14 +42,14 @@ spec:
           name: unbscholar-dspace-lib-unb-ca
           readinessProbe:
             httpGet:
-              path: /server
+              path: /server/api
               port: 8080
             initialDelaySeconds: 65
             timeoutSeconds: 3
             periodSeconds: 15
           livenessProbe:
             httpGet:
-              path: /server
+              path: /server/api
               port: 8080
             initialDelaySeconds: 130
             timeoutSeconds: 3
