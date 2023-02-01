@@ -60,8 +60,8 @@ RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/m
   $RSYNC_MOVE /build/scripts/ /scripts && \
   /scripts/add_xforward_tomcat.sh
 
-EXPOSE 8009
 EXPOSE 8000
+EXPOSE 8009
 
 ENTRYPOINT ["/scripts/run.sh"]
 
