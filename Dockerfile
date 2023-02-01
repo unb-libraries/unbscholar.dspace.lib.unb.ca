@@ -61,6 +61,7 @@ RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/m
   /scripts/add_xforward_tomcat.sh
 
 EXPOSE 8009
+EXPOSE 8000
 
 ENTRYPOINT ["/scripts/run.sh"]
 
