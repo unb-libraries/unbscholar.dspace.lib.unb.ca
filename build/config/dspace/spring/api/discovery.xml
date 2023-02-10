@@ -224,19 +224,19 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dspace.entity.type"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="person.identifier.jobtitle"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -245,22 +245,22 @@
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <!-- By default, full text snippets are disabled, as snippets of embargoed/restricted bitstreams
                              may appear in search results when the Item is public. See DS-3498
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.status"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.description"/>
                             <property name="maxSize" value="250"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         -->
                     </list>
@@ -361,19 +361,19 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dspace.entity.type"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="person.identifier.jobtitle"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -382,22 +382,22 @@
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <!-- By default, full text snippets are disabled, as snippets of embargoed/restricted bitstreams
                              may appear in search results when the Item is public. See DS-3498
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.status"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.description"/>
                             <property name="maxSize" value="250"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         -->
                     </list>
@@ -500,19 +500,19 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dspace.entity.type"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="person.identifier.jobtitle"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -521,22 +521,22 @@
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <!-- By default, full text snippets are disabled, as snippets of embargoed/restricted bitstreams
                              may appear in search results when the Item is public. See DS-3498
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.status"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.description"/>
                             <property name="maxSize" value="250"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         -->
                     </list>
@@ -640,19 +640,19 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dspace.entity.type"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="person.identifier.jobtitle"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -661,22 +661,22 @@
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <!-- By default, full text snippets are disabled, as snippets of embargoed/restricted bitstreams
                              may appear in search results when the Item is public. See DS-3498
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.status"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.description"/>
                             <property name="maxSize" value="250"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         -->
                     </list>
@@ -774,19 +774,19 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dspace.entity.type"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="person.identifier.jobtitle"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -795,22 +795,22 @@
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                          <!-- By default, full text snippets are disabled, as snippets of embargoed/restricted bitstreams
                              may appear in search results when the Item is public. See DS-3498
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="project.identifier.status"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.name"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="orgunit.identifier.description"/>
                             <property name="maxSize" value="250"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         -->
                     </list>
@@ -870,11 +870,11 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -945,11 +945,11 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
@@ -1019,11 +1019,11 @@
                     <list>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.title"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.contributor.author"/>
-                            <property name="snippets" value="5"/>
+                            <property name="snippets" value="10"/>
                         </bean>
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="dc.description.abstract"/>
