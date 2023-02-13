@@ -21,10 +21,10 @@
         <name-map collection-handle="default" submission-name="FacultyAndStaffDeposit"/>
 
         <!-- Graduate Research -->
-        <name-map collection-handle="123456789/59" submission-name="StudentDeposits"/>
+        <name-map collection-handle="1882/12776" submission-name="StudentDeposits"/>
 
         <!-- Undergraduate Research -->
-        <name-map collection-handle="123456789/62" submission-name="StudentDeposits"/>
+        <name-map collection-handle="1882/12780" submission-name="StudentDeposits"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
