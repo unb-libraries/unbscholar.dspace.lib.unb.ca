@@ -65,6 +65,12 @@ spec:
               name: DSPACE_PROTOCOL
               value: https
             -
+              name: DSPACE_GOOGLE_ANALYTICS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: unbscholar
+                  key: google-analytics-key
+            -
               name: DSPACE_URI
               value: unbscholar.lib.unb.ca
             -
