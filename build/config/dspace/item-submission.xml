@@ -20,8 +20,13 @@
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="FacultyAndStaffDeposit"/>
 
+        <!-- Faculty Deposits -->
+        <!-- Journal Articles -->
+        <name-map collection-handle="1882/12771" submission-name="FacultAndStaffDeposit"/>
+
         <!-- Graduate Research -->
-        <name-map collection-handle="1882/12776" submission-name="StudentDeposits"/>
+        <!-- Open Theses & Dissertations -->
+        <name-map collection-handle="1882/12778" submission-name="StudentDeposits"/>
 
         <!-- Undergraduate Research -->
         <name-map collection-handle="1882/12780" submission-name="StudentDeposits"/>
@@ -285,27 +290,19 @@
         <submission-process name="traditional">
             <!--Uncommment to display the SAMPLE step as your first step -->
             <!--<step id="sample"/> -->
-
             <step id="collection"/>
-
             <!--Step will be to Describe the item. -->
             <step id="traditionalpageone"/>
             <step id="traditionalpagetwo"/>
-
             <!-- Uncomment this step to allow the user to embargo or access restrict the entire item -->
             <!-- <step id="itemAccessConditions"/> -->
-
             <!-- Uncomment this step to show when appropriate publisher policies retrieved from SHERPA/RoMEO -->
             <!-- <step id="sherpaPolicies"/> -->
-
             <!--Step will be to Upload the item -->
             <step id="upload"/>
-
             <!-- <step id="extractionstep"/> -->
-
             <!-- Uncomment this step to allow the user to select a Creative Commons License -->
             <!-- <step id="cclicense"/> -->
-
             <!--Step will be to Sign off on the required DSpace License agreement -->
             <step id="license"/>
         </submission-process>
