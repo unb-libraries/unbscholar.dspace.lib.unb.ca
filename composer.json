@@ -16,6 +16,11 @@
   "require-dev": {
     "unb-libraries/dockworker": "^5"
   },
+  "autoload": {
+    "psr-4": {
+      "Dockworker\\": ".dockworker/src"
+    }
+  },
   "scripts": {
     "post-update-cmd": [
       "vendor/bin/dockworker dockworker:git:setup-hooks"
