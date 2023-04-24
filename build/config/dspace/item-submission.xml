@@ -22,14 +22,14 @@
 
         <!-- Faculty Deposits -->
         <!-- Journal Articles -->
-        <name-map collection-handle="1882/12771" submission-name="FacultAndStaffDeposit"/>
+        <name-map collection-handle="1882/12771" submission-name="FacultyAndStaffDeposit"/>
 
         <!-- Graduate Research -->
         <!-- Open Theses & Dissertations -->
-        <name-map collection-handle="1882/12778" submission-name="StudentDeposits"/>
+        <name-map collection-handle="1882/12778" submission-name="studentDeposit"/>
 
         <!-- Undergraduate Research -->
-        <name-map collection-handle="1882/12780" submission-name="StudentDeposits"/>
+        <name-map collection-handle="1882/12781" submission-name="studentDeposit"/>
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -264,7 +264,7 @@
     <submission-definitions>
 
         <!--Submission Process for student deposits.-->
-        <submission-process name="StudentDeposits">
+        <submission-process name="studentDeposit">
             <step id="collection"/>
             <step id="itemStep"/>
             <step id="studentDepositStep"/>
