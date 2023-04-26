@@ -58,7 +58,7 @@
                     <repeatable>false</repeatable>
                     <label>Title</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
+                    <hint>Enter the full title of the item.</hint>
                     <required>You must enter a main title for this item.</required>
                 </field>
             </row>
@@ -83,7 +83,7 @@
                     <repeatable>true</repeatable>
                     <name-variants>true</name-variants>
                     <label>Author</label>
-                    <hint>Add an author</hint>
+                    <hint>Add an author.</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -104,7 +104,7 @@
                     <repeatable>true</repeatable>
                     <label>Keywords</label>
                     <input-type>tag</input-type>
-                    <hint>Enter appropriate subject keywords or phrases.</hint>
+                    <hint>Enter appropriate subject keywords or phrases (autocorrect against srsc vocab). Optional.</hint>
                     <required></required>
                     <vocabulary>srsc</vocabulary>
                 </field>
@@ -132,9 +132,7 @@
                     <label>Date of Issue</label>
                     <style>col-sm-4</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution.
-                        You can leave out the day
-                        and/or month if they aren't applicable.
+                    <hint>Please give the date of previous publication or public distribution. You can leave out the day and/or month if they aren't applicable.
                     </hint>
                     <required>You must enter at least the year.</required>
                 </field>
@@ -148,7 +146,7 @@
                     <repeatable>false</repeatable>
                     <label>Related Dataset</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the URL/DOI of the related Dataset.</hint>
+                    <hint>If applicable, enter the URL/DOI of a related Dataset.</hint>
                     <required></required>
                 </field>
             </row>
@@ -161,9 +159,7 @@
                     <repeatable>false</repeatable>
                     <label>Language</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does not appear in the
-                        list, please select 'Other'. If the content does not really have a language (for example, if it
-                        is a dataset or an image) please select 'N/A'.
+                    <hint>Select the language of the main content of the item. If the language does not appear in the list, please select 'Other'. If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.
                     </hint>
                     <required></required>
                 </field>
@@ -176,7 +172,7 @@
                     <repeatable>true</repeatable>
                     <name-variants>false</name-variants>
                     <label>Funding</label>
-                    <hint>Add a related Funding</hint>
+                    <hint>Was this work the product of funding? Add funding bodies here.</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>relation</dc-element>
@@ -194,7 +190,7 @@
                     <repeatable>false</repeatable>
                     <label>Access Type</label>
                     <input-type value-pairs-name="openaire_rights">dropdown</input-type>
-                    <hint>Select the access type of the resource.</hint>
+                    <hint>Select the intended access type of the resource.</hint>
                     <required></required>
                 </field>
             </row>
@@ -207,7 +203,7 @@
                     <repeatable>false</repeatable>
                     <label>License</label>
                     <input-type value-pairs-name="openaire_license_types">dropdown</input-type>
-                    <hint>Select the license of the resource.</hint>
+                    <hint>Select an appropriate license.</hint>
                     <required></required>
                 </field>
             </row>
@@ -223,7 +219,7 @@
                     <repeatable>true</repeatable>
                     <label>Advisor(s)</label>
                     <input-type>onebox</input-type>
-                    <hint>Add an advisor.</hint>
+                    <hint>Add the thesis or dissertation advisor.</hint>
                     <required></required>
                 </field>
             </row>
@@ -236,7 +232,7 @@
                     <repeatable>false</repeatable>
                     <label>Publisher</label>
                     <input-type value-pairs-name="unb">dropdown</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
+                    <hint>Please choose "University of New Brunswick" from the dropdown.</hint>
                     <required>Please select the publisher.</required>
                 </field>
             </row>
@@ -249,7 +245,7 @@
                     <repeatable>false</repeatable>
                     <label>Extent</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the extent of the item.</hint>
+                    <hint>Enter the extent of the item. Format example: xxv, 351 pages</hint>
                     <required></required>
                 </field>
             </row>
@@ -262,7 +258,7 @@
                     <repeatable>false</repeatable>
                     <label>Format</label>
                     <input-type value-pairs-name="student_deposit_format">dropdown</input-type>
-                    <hint>Select the format of the item.</hint>
+                    <hint>Select the original format of the thesis.</hint>
                     <required></required>
                 </field>
             </row>
@@ -275,7 +271,7 @@
                     <repeatable>false</repeatable>
                     <label>Type</label>
                     <input-type value-pairs-name="student_deposit_types">dropdown</input-type>
-                    <hint>Select the type of the item.</hint>
+                    <hint>Select the thesis type.</hint>
                     <required>Please select the type of item you wish to deposit.</required>
                 </field>
             </row>
@@ -289,8 +285,7 @@
                     <repeatable>true</repeatable>
                     <label>Subjects</label>
                     <input-type value-pairs-name="student_deposit_headings">qualdrop_value</input-type>
-                    <hint>If the item has any special subject headings please select the type and enter them.
-                    </hint>
+                    <hint>(Cataloguing Step) If the item has any special subject headings please select the type and enter them.</hint>
                     <required></required>
                 </field>
             </row>
@@ -316,7 +311,7 @@
                     <repeatable>true</repeatable>
                     <label>Provenance</label>
                     <input-type>textarea</input-type>
-                    <hint></hint>
+                    <hint>Any other additional context about this thesis in our collection.</hint>
                     <required></required>
                 </field>
             </row>
@@ -329,7 +324,7 @@
                     <repeatable>true</repeatable>
                     <label>Note</label>
                     <input-type>textarea</input-type>
-                    <hint>Notes for this deposit.</hint>
+                    <hint/>
                     <required></required>
                 </field>
             </row>
@@ -346,7 +341,7 @@
                     <label>Degree Name</label>
                     <style>col-sm-8</style>
                     <input-type value-pairs-name="degree_name">dropdown</input-type>
-                    <hint>Select the degree name.</hint>
+                    <hint>Select the degree name from the drop down.</hint>
                     <required>Please select a degree name.</required>
                 </field>
             </row>
