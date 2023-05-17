@@ -2165,7 +2165,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterWithdrawn" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -2176,7 +2176,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterTitle" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2187,7 +2187,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsAuthorOfPublicationRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2198,7 +2198,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsProjectOfPublicationRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2209,7 +2209,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
 
@@ -2221,7 +2221,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfJournalIssueRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2232,7 +2232,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsJournalOfPublicationRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2243,7 +2243,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterAuthor" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -2258,7 +2258,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2302,7 +2302,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
 
     </bean>
@@ -2317,7 +2317,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
 
     </bean>
 
@@ -2385,7 +2385,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2414,7 +2414,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
 
     </bean>
@@ -2427,7 +2427,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterGivenName" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2438,7 +2438,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsOrgUnitOfPersonRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2449,7 +2449,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsProjectOfPersonRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2460,7 +2460,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfAuthorRelation"
@@ -2472,7 +2472,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
 
@@ -2488,7 +2488,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2504,7 +2504,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2521,7 +2521,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2533,7 +2533,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPersonOfOrgUnitRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2544,7 +2544,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsProjectOfOrgUnitRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2555,7 +2555,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfOrgUnitRelation"
@@ -2567,7 +2567,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterCreativeWorkKeywords" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -2581,7 +2581,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2598,7 +2598,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2610,7 +2610,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfJournalIssue" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2621,7 +2621,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterPublicationVolumeNumber" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2632,7 +2632,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsIssueOfJournalVolumeRelation"
@@ -2644,7 +2644,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsJournalVolumeRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2655,7 +2655,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterCreativeWorkPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
@@ -2669,7 +2669,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2684,7 +2684,7 @@
         <property name="sortOrderSidebar" value="COUNT"/>
         <property name="sortOrderFilterPage" value="COUNT"/>
         <property name="isOpenByDefault" value="true"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
@@ -2696,7 +2696,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
 
@@ -2721,7 +2721,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPersonOfProjectRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2733,7 +2733,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfProjectRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2745,7 +2745,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsContributorOfPublicationRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2756,7 +2756,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsPublicationOfContributorRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2767,7 +2767,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsFundingAgencyOfProjectRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2778,7 +2778,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <bean id="searchFilterIsProjectOfFundingAgencyRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
@@ -2789,7 +2789,7 @@
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
-        <property name="pageSize" value="10"/>
+        <property name="pageSize" value="20"/>
     </bean>
 
     <!--Sort properties-->
