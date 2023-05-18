@@ -3,8 +3,8 @@
 */15 * * * * root /dspace/bin/dspace index-authority
 */15 * * * * root /dspace/bin/dspace index-discovery
 0 1 1 * * root /dspace/bin/dspace cleanup > /dev/null
-10 3 * * * root /dspace/bin/dspace oai import
-10 3 * * * root /dspace/bin/dspace stats-util -i
-10 3 * * * root /dspace/bin/dspace subscription-send -f D
+10 4 * * * root /dspace/bin/dspace oai import
+10 5 * * * root /dspace/bin/dspace stats-util -i
+10 6 * * * root /dspace/bin/dspace subscription-send -f D
 0 3 * * 0 root /dspace/bin/dspace subscription-send -f W
 0 2 1 * * root /dspace/bin/dspace subscription-send -f M
