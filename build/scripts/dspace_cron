@@ -1,10 +1,10 @@
 # cron entries for DSpace.
-*/15 * * * * root /dspace/bin/dspace filter-media
-*/15 * * * * root /dspace/bin/dspace index-authority
-*/15 * * * * root /dspace/bin/dspace index-discovery
-0 1 1 * * root /dspace/bin/dspace cleanup > /dev/null
-10 4 * * * root /dspace/bin/dspace oai import
-10 5 * * * root /dspace/bin/dspace stats-util -i
-10 6 * * * root /dspace/bin/dspace subscription-send -f D
-0 3 * * 0 root /dspace/bin/dspace subscription-send -f W
-0 2 1 * * root /dspace/bin/dspace subscription-send -f M
+*/15 * * * * root /dspace/bin/dspace filter-media 2> /proc/self/fd/2 1> /proc/self/fd/1
+*/15 * * * * root /dspace/bin/dspace index-authority 2> /proc/self/fd/2 1> /proc/self/fd/1
+*/15 * * * * root /dspace/bin/dspace index-discovery 2> /proc/self/fd/2 1> /proc/self/fd/1
+0 1 1 * * root /dspace/bin/dspace cleanup > /dev/null 2> /proc/self/fd/2 1> /proc/self/fd/1
+10 4 * * * root /dspace/bin/dspace oai import 2> /proc/self/fd/2 1> /proc/self/fd/1
+10 5 * * * root /dspace/bin/dspace stats-util -i 2> /proc/self/fd/2 1> /proc/self/fd/1
+10 6 * * * root /dspace/bin/dspace subscription-send -f D 2> /proc/self/fd/2 1> /proc/self/fd/1
+0 3 * * 0 root /dspace/bin/dspace subscription-send -f W 2> /proc/self/fd/2 1> /proc/self/fd/1
+0 2 1 * * root /dspace/bin/dspace subscription-send -f M 2> /proc/self/fd/2 1> /proc/self/fd/1
