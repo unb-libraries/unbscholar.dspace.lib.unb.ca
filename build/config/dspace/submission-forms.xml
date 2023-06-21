@@ -1767,183 +1767,183 @@
         <value-pairs value-pairs-name= "discipline_types" dc-term ="type">
           <pair>
             <displayed-value>Anthropology</displayed-value>
-            <stored-value>anthropology</stored-value>
+            <stored-value>Anthropology</stored-value>
           </pair>
           <pair>
             <displayed-value>Applied Health Services Research</displayed-value>
-            <stored-value>applied health services research</stored-value>
+            <stored-value>Applied Health Services Research</stored-value>
           </pair>
           <pair>
             <displayed-value>Archaeology</displayed-value>
-            <stored-value>archaeology</stored-value>
+            <stored-value>Archaeology</stored-value>
           </pair>
           <pair>
             <displayed-value>Biology</displayed-value>
-            <stored-value>biology</stored-value>
+            <stored-value>Biology</stored-value>
           </pair>
           <pair>
             <displayed-value>Business Administration</displayed-value>
-            <stored-value>business administration</stored-value>
+            <stored-value>Business Administration</stored-value>
           </pair>
           <pair>
             <displayed-value>Chemical Engineering</displayed-value>
-            <stored-value>chemical engineering</stored-value>
+            <stored-value>Chemical Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>Chemistry</displayed-value>
-            <stored-value>chemistry</stored-value>
+            <stored-value>Chemistry</stored-value>
           </pair>
           <pair>
             <displayed-value>Civil Engineering</displayed-value>
-            <stored-value>civil engineering</stored-value>
+            <stored-value>Civil Engineering</stored-value>
           </pair>
           <pair>
-            <displayed-value>Classics &amp; Ancient History</displayed-value>
-            <stored-value>classics and ancient history</stored-value>
+            <displayed-value>Classics and Ancient History</displayed-value>
+            <stored-value>Classics and Ancient History</stored-value>
           </pair>
           <pair>
             <displayed-value>Computer Science</displayed-value>
-            <stored-value>computer science</stored-value>
+            <stored-value>Computer Science</stored-value>
           </pair>
           <pair>
             <displayed-value>Creative Writing</displayed-value>
-            <stored-value>creative writing</stored-value>
+            <stored-value>Creative Writing</stored-value>
           </pair>
           <pair>
             <displayed-value>Culture and Language Studies</displayed-value>
-            <stored-value>culture and language studies</stored-value>
+            <stored-value>Culture and Language Studies</stored-value>
           </pair>
           <pair>
             <displayed-value>Drama</displayed-value>
-            <stored-value>drama</stored-value>
+            <stored-value>Drama</stored-value>
           </pair>
           <pair>
             <displayed-value>Earth Sciences</displayed-value>
-            <stored-value>earth sciences</stored-value>
+            <stored-value>Earth Sciences</stored-value>
           </pair>
           <pair>
             <displayed-value>Economics</displayed-value>
-            <stored-value>economics</stored-value>
+            <stored-value>Economics</stored-value>
           </pair>
           <pair>
             <displayed-value>Education</displayed-value>
-            <stored-value>education</stored-value>
+            <stored-value>Education</stored-value>
           </pair>
           <pair>
-            <displayed-value>Electrical &amp; Computer Engineering</displayed-value>
-            <stored-value>electrical and computer engineering</stored-value>
+            <displayed-value>Electrical and Computer Engineering</displayed-value>
+            <stored-value>Electrical and Computer Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>Electrical Engineering</displayed-value>
-            <stored-value>electrical engineering</stored-value>
+            <stored-value>Electrical Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>English</displayed-value>
-            <stored-value>english</stored-value>
+            <stored-value>English</stored-value>
           </pair>
           <pair>
             <displayed-value>Forest Engineering</displayed-value>
-            <stored-value>forest engineering</stored-value>
+            <stored-value>Forest Engineering</stored-value>
           </pair>
           <pair>
-            <displayed-value>Forestry &amp; Environmental Management</displayed-value>
-            <stored-value>forestry and enviromental management</stored-value>
+            <displayed-value>Forestry and Environmental Management</displayed-value>
+            <stored-value>Forestry and Enviromental Management</stored-value>
           </pair>
           <pair>
             <displayed-value>French</displayed-value>
-            <stored-value>french</stored-value>
+            <stored-value>French</stored-value>
           </pair>
           <pair>
-            <displayed-value>Gender &amp; Women's Studies</displayed-value>
-            <stored-value>gender and women's studies</stored-value>
+            <displayed-value>Gender and Women's Studies</displayed-value>
+            <stored-value>Gender and Women's Studies</stored-value>
           </pair>
           <pair>
-            <displayed-value>Geodesy &amp; Geomatics</displayed-value>
-            <stored-value>geodesy and geomatics</stored-value>
+            <displayed-value>Geodesy and Geomatics</displayed-value>
+            <stored-value>Geodesy and Geomatics</stored-value>
           </pair>
           <pair>
             <displayed-value>Geological Engineering</displayed-value>
-            <stored-value>geological engineering</stored-value>
+            <stored-value>Geological Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>Health Services Research (Applied)</displayed-value>
-            <stored-value>health services research (applied)</stored-value>
+            <stored-value>Health Services Research (Applied)</stored-value>
           </pair>
           <pair>
             <displayed-value>History</displayed-value>
-            <stored-value>history</stored-value>
+            <stored-value>History</stored-value>
           </pair>
           <pair>
             <displayed-value>Interdisciplinary Studies</displayed-value>
-            <stored-value>interdisciplinary studies</stored-value>
+            <stored-value>Interdisciplinary Studies</stored-value>
           </pair>
           <pair>
             <displayed-value>International Development Studies</displayed-value>
-            <stored-value>international development studies</stored-value>
+            <stored-value>International Development Studies</stored-value>
           </pair>
           <pair>
             <displayed-value>Kinesiology</displayed-value>
-            <stored-value>kinesiology</stored-value>
+            <stored-value>Kinesiology</stored-value>
           </pair>
           <pair>
             <displayed-value>Law</displayed-value>
-            <stored-value>law</stored-value>
+            <stored-value>Law</stored-value>
           </pair>
           <pair>
             <displayed-value>Library and Information Science</displayed-value>
-            <stored-value>library and information science</stored-value>
+            <stored-value>Library and Information Science</stored-value>
           </pair>
           <pair>
-            <displayed-value>Mathematics &amp; Statistics</displayed-value>
-            <stored-value>mathematics and statistics</stored-value>
+            <displayed-value>Mathematics and Statistics</displayed-value>
+            <stored-value>Mathematics and Statistics</stored-value>
           </pair>
           <pair>
             <displayed-value>Mechanical Engineering</displayed-value>
-            <stored-value>mechanical engineering</stored-value>
+            <stored-value>Mechanical Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>Multimedia Studies</displayed-value>
-            <stored-value>multimedia studies</stored-value>
+            <stored-value>Multimedia Studies</stored-value>
           </pair>
           <pair>
             <displayed-value>Nursing</displayed-value>
-            <stored-value>nursing</stored-value>
+            <stored-value>Nursing</stored-value>
           </pair>
           <pair>
             <displayed-value>Philosophy</displayed-value>
-            <stored-value>philosophy</stored-value>
+            <stored-value>Philosophy</stored-value>
           </pair>
           <pair>
             <displayed-value>Physics</displayed-value>
-            <stored-value>physics</stored-value>
+            <stored-value>Physics</stored-value>
           </pair>
           <pair>
             <displayed-value>Policy Studies</displayed-value>
-            <stored-value>policy studies</stored-value>
+            <stored-value>Policy Studies</stored-value>
           </pair>
           <pair>
             <displayed-value>Political Science</displayed-value>
-            <stored-value>political science</stored-value>
+            <stored-value>Political Science</stored-value>
           </pair>
           <pair>
             <displayed-value>Psychology</displayed-value>
-            <stored-value>psychology</stored-value>
+            <stored-value>Psychology</stored-value>
           </pair>
           <pair>
             <displayed-value>Sociology</displayed-value>
-            <stored-value>sociology</stored-value>
+            <stored-value>Sociology</stored-value>
           </pair>
           <pair>
             <displayed-value>Software Engineering</displayed-value>
-            <stored-value>software engineering</stored-value>
+            <stored-value>Software Engineering</stored-value>
           </pair>
           <pair>
             <displayed-value>Technology Management Entrepreneurship</displayed-value>
-            <stored-value>technology management entrepreneurship</stored-value>
+            <stored-value>Technology Management Entrepreneurship</stored-value>
           </pair>
           <pair>
             <displayed-value>Other</displayed-value>
-            <stored-value>other</stored-value>
+            <stored-value>Other</stored-value>
           </pair>
         </value-pairs>
 
