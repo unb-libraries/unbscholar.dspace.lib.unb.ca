@@ -1277,9 +1277,9 @@
                     <dc-element>relation</dc-element>
                     <dc-qualifier>hasversion</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Editor Version</label>
+                    <label>Publisher Version</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the URL/DOI of the editor version of this item.</hint>
+                    <hint>Enter the URL/DOI of the published version of this item.</hint>
                     <required></required>
                 </field>
             </row>
