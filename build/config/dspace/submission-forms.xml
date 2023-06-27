@@ -1990,16 +1990,32 @@
 
         <value-pairs value-pairs-name="degree_name" dc-term="type">
             <pair>
+                <displayed-value>Ph.D.</displayed-value>
+                <stored-value>Ph.D.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ph.D.IDST.</displayed-value>
+                <stored-value>Ph.D.IDST.</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>M.A.</displayed-value>
                 <stored-value>M.A.</stored-value>
             </pair>
             <pair>
-                <displayed-value>M.A.S.R.C.</displayed-value>
-                <stored-value>M.A.S.R.C.</stored-value>
+                <displayed-value>M.A.C.Sec.</displayed-value>
+                <stored-value>M.A.C.Sec.</stored-value>
             </pair>
             <pair>
                 <displayed-value>M.A.H.S.R.</displayed-value>
                 <stored-value>M.A.H.S.R.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.A.P.R.E.</displayed-value>
+                <stored-value>M.A.P.R.E.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.A.S.R.S.</displayed-value>
+                <stored-value>M.A.S.R.S.</stored-value>
             </pair>
             <pair>
                 <displayed-value>M.B.A.</displayed-value>
@@ -2014,16 +2030,16 @@
                 <stored-value>M.C.S.C.</stored-value>
             </pair>
             <pair>
-                <displayed-value>M.E.M.</displayed-value>
-                <stored-value>M.E.M.</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>M.Ed.</displayed-value>
                 <stored-value>M.Ed.</stored-value>
             </pair>
             <pair>
                 <displayed-value>M.Eng.</displayed-value>
                 <stored-value>M.Eng.</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>M.E.M.</displayed-value>
+                <stored-value>M.E.M.</stored-value>
             </pair>
             <pair>
                 <displayed-value>M.F.</displayed-value>
@@ -2058,6 +2074,10 @@
                 <stored-value>M.Sc.E.M.</stored-value>
             </pair>
             <pair>
+                <displayed-value>M.Sc.E.S.S.</displayed-value>
+                <stored-value>M.Sc.E.S.S.</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>M.Sc.F.</displayed-value>
                 <stored-value>M.Sc.F.</stored-value>
             </pair>
@@ -2066,12 +2086,12 @@
                 <stored-value>M.Sc.F.E.</stored-value>
             </pair>
             <pair>
-                <displayed-value>Ph.D.</displayed-value>
-                <stored-value>Ph.D.</stored-value>
+                <displayed-value>M.Sc.Kin.</displayed-value>
+                <stored-value>M.Sc.Kin.</stored-value>
             </pair>
             <pair>
-                <displayed-value>Ph.D.IDST.</displayed-value>
-                <stored-value>Ph.D.IDST.</stored-value>
+                <displayed-value>M.T.M.E.</displayed-value>
+                <stored-value>M.T.M.E.</stored-value>
             </pair>
         </value-pairs>
 
@@ -2352,6 +2372,10 @@
             <pair>
                 <displayed-value>- Still Image</displayed-value>
                 <stored-value>still image</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Learning Object</displayed-value>
+                <stored-value>learning object</stored-value>
             </pair>
             <pair>
                 <displayed-value>Other</displayed-value>
