@@ -36,7 +36,7 @@ spec:
         vcsRef: prod
     spec:
       nodeSelector:
-        deployenv: prod
+        deploy_prod: 'true'
       containers:
         -
           name: unbscholar-dspace-lib-unb-ca
@@ -62,14 +62,14 @@ spec:
               name: DSPACE_HOSTNAME
               value: unbscholar.dspace.lib.unb.ca
             -
-              name: DSPACE_PROTOCOL
-              value: https
-            -
               name: DSPACE_GOOGLE_ANALYTICS_KEY
               valueFrom:
                 secretKeyRef:
                   name: unbscholar
                   key: google-analytics-key
+            -
+              name: DSPACE_PROTOCOL
+              value: https
             -
               name: DSPACE_URI
               value: unbscholar.lib.unb.ca
