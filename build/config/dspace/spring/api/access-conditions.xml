@@ -35,7 +35,7 @@
         <property name="groupName" value="Anonymous"/>
         <property name="name" value="embargo"/>
         <property name="hasStartDate" value="true"/>
-        <property name="startDateLimit" value="+36MONTHS"/>
+        <property name="startDateLimit" value="+48MONTHS"/>
         <property name="hasEndDate" value="false"/>
     </bean>
     <bean id="administrator" class="org.dspace.submit.model.AccessConditionOption">
