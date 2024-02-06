@@ -2,7 +2,7 @@
 FROM maven:3-openjdk-11-slim as build
 
 ARG TARGET_DIR=dspace-installer
-ARG DSPACE_REFSPEC=dspace-7.6
+ARG DSPACE_REFSPEC=dspace-7.6.1
 
 WORKDIR /app
 RUN useradd dspace && \
