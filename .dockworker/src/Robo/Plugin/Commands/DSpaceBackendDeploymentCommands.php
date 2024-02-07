@@ -10,7 +10,7 @@ use Dockworker\Robo\Plugin\Commands\DockworkerDeploymentCommands;
 class DSpaceBackendDeploymentCommands extends DockworkerDeploymentCommands {
 
   /**
-   * Provides Dspace Frontend related new deployed ignored log exceptions.
+   * Provides Dspace related new deployed ignored log exceptions.
    *
    * @hook on-event dockworker-deployment-log-error-exceptions
    */
@@ -18,11 +18,12 @@ class DSpaceBackendDeploymentCommands extends DockworkerDeploymentCommands {
     return [
       'INFO' => 'Lines that also have INFO aren\'t errors',
       'configuration is missing in solr-statistics' => 'Statistics are not enabled',
+      'here is already a transaction in progress' => 'not a critical error',
     ];
   }
 
   /**
-   * Provides Dspace Frontend related new local ignored log exceptions.
+   * Provides Dspace related new local ignored log exceptions.
    *
    * @hook on-event dockworker-local-log-error-exceptions
    */
@@ -30,6 +31,7 @@ class DSpaceBackendDeploymentCommands extends DockworkerDeploymentCommands {
     return [
       'INFO' => 'Lines that also have INFO aren\'t errors',
       'configuration is missing in solr-statistics' => 'Statistics are not enabled',
+      'here is already a transaction in progress' => 'not a critical error',
     ];
   }
 
