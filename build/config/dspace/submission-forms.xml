@@ -2434,6 +2434,10 @@
                 <stored-value>conference object</stored-value>
             </pair>
             <pair>
+                <displayed-value>-- Conference Presentation</displayed-value>
+                <stored-value>conference presentation</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>-- Conference Proceedings</displayed-value>
                 <stored-value>conference proceedings</stored-value>
             </pair>
