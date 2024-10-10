@@ -32,7 +32,7 @@
         <property name="endDateLimit" value="+6MONTHS"/>
     </bean>
     <bean id="embargoed" class="org.dspace.submit.model.AccessConditionOption">
-        <property name="groupName" value="Anonymous"/>
+        <property name="groupName" value="Embargoed"/>
         <property name="name" value="embargo"/>
         <property name="hasStartDate" value="true"/>
         <property name="startDateLimit" value="+48MONTHS"/>
