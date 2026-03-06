@@ -1,29 +1,54 @@
 dockworker:
-  version: '5'
+  version: '6'
   application:
-    name: unbscholar.dspace.lib.unb.ca
-    finish_marker: 'Server startup in'
-    project_prefix: SCHOLAR
-    shell: /bin/bash
-    upstream_images:
-      - maven:3-jdk-8-alpine
-      - tomcat:8-jre8
-    uuid: 3507
-  deployment:
-    environments:
+    name: UNB Libraries AI Gateway
+    uri: https://unbscholar.dspace.lib.unb.ca
+    description: >
+      An AI Gateway for routing application inference requests to the appropriate endpoints within our infrastructure.
+    topics:
+      - dspace
+      - scholar
+    identifiers:
+      id: unbscholar.dspace.lib.unb.ca
+      slug: unbscholar-dspace-lib-unb-ca
+      short_slug: scholardspace
+      uuid: 3507
+    framework:
+      name: DSpace
+      version: 9
+      startup_finished_marker: 'Server startup in'
+      endpoint:
+        name: http
+        port: 8080
+        readiness_timeout: 15
+    license:
+      license: MIT
+      holder: University of New Brunswick Libraries
+    shell:
+      path: /bin/sh
+  endpoints:
+    env:
       - prod
-    local:
-      localhost_hostnames:
-        - unbscholar.dspace.lib.unb.ca
-    workflow:
-      source: dockworker
-      type: deployment-workflow
-  github:
-    repo: unbscholar.dspace.lib.unb.ca
-    owner: unb-libraries
-  image:
-    push_branches:
-      - prod
-    name: ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca
-    date_tag_image: true
-    repository: ghcr
+    deployments:
+      unbscholar-dspace-lib-unb-ca:
+        default: true
+        managed: true
+        name: unbscholar-dspace-lib-unb-ca
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: unbscholar.dspace.lib.unb.ca
+    jira:
+      project_keys:
+        - SCHOLAR
+    image:
+      name: ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca
+      parent: 
+        - dspace/dspace:9.0
+        - maven:3-jdk-8-alpine
+        - tomcat:8-jre8
+      repository: GitHub
+      push-branches:
+        - dev
+        - prod

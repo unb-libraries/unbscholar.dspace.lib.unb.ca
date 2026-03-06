@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 AIPZIP='https://github.com/DSpace-Labs/AIP-Files/raw/main/dogAndReport.zip'
 AIPDIR='/tmp/aip-dir'
 

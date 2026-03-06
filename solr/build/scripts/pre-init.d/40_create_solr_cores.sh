@@ -2,10 +2,17 @@
 set -e
 
 if [ "$DEPLOY_ENV" == "local" ]; then
-  for CORE in authority oai search statistics
+  mkdir -p /var/solr/data
+  for CORE in authority oai qaevent search statistics suggestion
   do
-    echo "Creating Core $CORE..."
-    /opt/docker-solr/scripts/precreate-core $CORE "/data/cores/$CORE"
+    if [ -d "/data/cores/$CORE" ]; then
+      echo "Configuring core $CORE..."
+      cp -r "/data/cores/$CORE" "/var/solr/data/$CORE"
+        cat > "/var/solr/data/$CORE/core.properties" << EOF
+name=$CORE
+EOF
+    fi
+    # solr-precreate $CORE "/var/solr/data/$CORE"
   done
 
   # Avoid IO race condition if next step is startup.

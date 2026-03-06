@@ -14,7 +14,7 @@
   "name": "unb-libraries/unbscholar.dspace.lib.unb.ca",
   "prefer-stable": true,
   "require-dev": {
-    "unb-libraries/dockworker": "^5"
+   "unb-libraries/dockworker-daemon": "^6"
   },
   "autoload": {
     "psr-4": {
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "post-update-cmd": [
-      "vendor/bin/dockworker dockworker:git:setup-hooks"
+      "vendor/bin/dockworker git:setup-hooks"
     ]
   }
 }

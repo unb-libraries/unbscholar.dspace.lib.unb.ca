@@ -1,8 +1,8 @@
 # Maven Builder.
-FROM maven:3-openjdk-11-slim as build
+FROM maven:3-eclipse-temurin-17 AS build
 
 ARG TARGET_DIR=dspace-installer
-ARG DSPACE_REFSPEC=dspace-7.6.1
+ARG DSPACE_REFSPEC=dspace-9.2
 
 WORKDIR /app
 RUN useradd dspace && \
@@ -25,14 +25,14 @@ RUN mvn --no-transfer-progress package&& \
 
 
 # Ant Commands.
-FROM openjdk:11-slim as ant_build
+FROM eclipse-temurin:17 AS ant_build
 ARG TARGET_DIR=dspace-installer
 COPY --from=build /install /dspace-src
 WORKDIR /dspace-src
 
-ENV ANT_VERSION 1.10.9
-ENV ANT_HOME /tmp/ant-$ANT_VERSION
-ENV PATH $ANT_HOME/bin:$PATH
+ENV ANT_VERSION="1.10.14"
+ENV ANT_HOME="/tmp/ant-$ANT_VERSION"
+ENV PATH="$ANT_HOME/bin:$PATH"
 
 RUN apt-get update && apt-get install -y --no-install-recommends wget && \
   mkdir $ANT_HOME && \
@@ -41,24 +41,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget && \
 
 
 # Deployment Image
-FROM tomcat:9-jdk11
+FROM tomcat:10.1-jdk17-temurin-jammy
 
-ENV DSPACE_INSTALL /dspace
-ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
-ENV JAVA_OPTS -Xmx6g -Xms6g -Dfile.encoding=UTF-8
-ENV RSYNC_COPY "rsync -a --inplace --no-compress $RSYNC_FLAGS"
-ENV RSYNC_MOVE "$RSYNC_COPY --remove-source-files"
+ENV DSPACE_INSTALL="/dspace"
+ENV DSPACE_BIN="$DSPACE_INSTALL/bin/dspace"
+ENV JAVA_OPTS="-Xmx6g -Xms6g -Dfile.encoding=UTF-8"
+ENV RSYNC_FLAGS=""
+ENV RSYNC_COPY="rsync -a --inplace --no-compress $RSYNC_FLAGS"
+ENV RSYNC_MOVE="$RSYNC_COPY --remove-source-files"
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
 
 RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/main.cf && \
-  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat postfix rsync unzip && rm -rf /var/lib/apt/lists/* && \
+  apt-get update && DEBIAN_FRONTEND=noninteractive apt-get --yes install bsdmainutils netcat-traditional postfix rsync unzip && rm -rf /var/lib/apt/lists/* && \
   postfix start && \
   ln -s $DSPACE_INSTALL/webapps/server /usr/local/tomcat/webapps/server && \
   $RSYNC_MOVE /build/config/dspace/ $DSPACE_INSTALL/config/ && \
-  $RSYNC_MOVE /build/scripts/ /scripts && \
-  /scripts/install_dspace_cron.sh && \
+  $RSYNC_MOVE /build/scripts/ /scripts
+
+RUN /scripts/install_dspace_cron.sh && \
   /scripts/add_xforward_tomcat.sh && \
   /scripts/install_geoip_db.sh
 
@@ -81,4 +83,5 @@ LABEL ca.unb.lib.generator="dspace" \
   org.label-schema.vcs-url="https://github.com/unb-libraries/unbscholar.dspace.lib.unb.ca" \
   org.label-schema.vendor="University of New Brunswick Libraries" \
   org.label-schema.version=$VERSION \
+  org.opencontainers.image.authors="libsupport@unb.ca" \
   org.opencontainers.image.source="https://github.com/unb-libraries/unbscholar.dspace.lib.unb.ca"

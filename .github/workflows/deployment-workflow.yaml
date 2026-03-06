@@ -1,4 +1,4 @@
-name: unbscholar.dspace.lib.unb.ca
+name: Deploy unbscholar.dspace.lib.unb.ca
 
 on:
   pull_request:
@@ -7,15 +7,16 @@ on:
 
 jobs:
   deploy:
-    uses: unb-libraries/dockworker/.github/workflows/deployment-workflow.yaml@5.x
+    uses: unb-libraries/dockworker/.github/workflows/build-push-deploy-notify.yaml@6.x
     with:
-      deploy-branches: '["prod"]'
+      branch-env-map: '{"dev":"dev","prod":"prod","9.x":"9.x"}'
+      build-themes: false
+      deploy-branches: '["dev","prod"]'
+      image-name: 'ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca'
+      k8s-deployment-name: 'unbscholar-dspace-lib-unb-ca'
+      push-branches: '["dev","prod","9.x"]'
     secrets:
-      DOCKER_CLOUD_ACCESS_TOKEN: ${{ secrets.DOCKER_CLOUD_ACCESS_TOKEN }}
-      DOCKER_CLOUD_USER_NAME: ${{ secrets.DOCKER_CLOUD_USER_NAME }}
-      GH_CONTAINER_REGISTRY_TOKEN: ${{ secrets.GH_CONTAINER_REGISTRY_TOKEN }}
-      GH_CONTAINER_REGISTRY_USER: ${{ secrets.GH_CONTAINER_REGISTRY_USER }}
-      KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-      NEW_RELIC_ACCOUNT_ID: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
-      NEW_RELIC_API_KEY: ${{ secrets.NEW_RELIC_API_KEY }}
+      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_DATA }}
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      GH_CONTAINER_REGISTRY_USER: ${{ secrets.GH_CONTAINER_REGISTRY_USER }}
+      GH_CONTAINER_REGISTRY_TOKEN: ${{ secrets.GH_CONTAINER_REGISTRY_TOKEN }}

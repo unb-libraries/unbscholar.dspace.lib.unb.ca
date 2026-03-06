@@ -1,9 +1,9 @@
 services:
-  unbscholar.dspace.lib.unb.ca:
+  unbscholar-dspace-lib-unb-ca:
     build:
       context: .
     restart: unless-stopped
-    container_name: unbscholar.dspace.lib.unb.ca
+    container_name: unbscholar-dspace-lib-unb-ca
     env_file:
       - ./env/dspace.env
     expose:
@@ -12,7 +12,7 @@ services:
       - "3507:8080"
     networks:
       - unbscholar.dspace.lib.unb.ca
-  unbscholar.postgres.lib.unb.ca:
+  unbscholar-postgres-lib-unb-ca:
     build:
       context: postgres/
     restart: unless-stopped
@@ -22,7 +22,7 @@ services:
       - "5432"
     networks:
       - unbscholar.dspace.lib.unb.ca
-  unbscholar.solr.lib.unb.ca:
+  unbscholar-solr-lib-unb-ca:
     build:
       context: solr/
     restart: unless-stopped

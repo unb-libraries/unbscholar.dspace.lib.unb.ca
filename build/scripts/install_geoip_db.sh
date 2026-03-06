@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 CUR_YEAR=$(date +'%Y')
 CUR_MONTH=$(date +'%m')
 DB_FILE_NAME="dbip-city-lite-$CUR_YEAR-$CUR_MONTH.mmdb"

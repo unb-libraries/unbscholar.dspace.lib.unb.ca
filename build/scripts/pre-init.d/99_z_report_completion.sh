@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 STARTUP_TIME=$(cat /tmp/startup_time)
 printf "\nDeployment Complete!\n\n> Step Times:\n"
 column /tmp/deploy_step_times -t -s "|"

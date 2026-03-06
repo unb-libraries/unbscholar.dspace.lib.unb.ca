@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 # Check if postgres vars are set and then test the connection.
 
 # Check if postgres env vars exist.

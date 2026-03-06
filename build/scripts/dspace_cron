@@ -1,6 +1,6 @@
-*/15 * * * *  /dspace/bin/dspace filter-media
-*/15 * * * *  /dspace/bin/dspace index-authority
-*/15 * * * *  /dspace/bin/dspace index-discovery
+1,16,31,46 * * * *  /dspace/bin/dspace filter-media
+6,21,36,51 * * * *  /dspace/bin/dspace index-authority
+11,26,41,56 * * * *  /dspace/bin/dspace index-discovery
 0 1 1 * *     /dspace/bin/dspace cleanup
 10 4 * * *    /dspace/bin/dspace oai import
 10 5 * * *    /dspace/bin/dspace stats-util -i
@@ -9,3 +9,4 @@
 0 2 1 * *     /dspace/bin/dspace subscription-send -f M
 0 4 * * 0     /dspace/bin/dspace index-discovery --build
 0 5 * * 0     /dspace/bin/dspace index-discovery --clean
+# 0 4,12,20 * * *  $DSPACE/bin/dspace doi-organiser -u -q ; $DSPACE/bin/dspace doi-organiser -s -q ; $DSPACE/bin/dspace doi-organiser -r -q ; $DSPACE/bin/dspace doi-organiser -d -q
