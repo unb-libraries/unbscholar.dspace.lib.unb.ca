@@ -25,6 +25,7 @@ class DSpaceBackendDeployCommands extends DockworkerDaemonCommands
                     'configuration is missing in solr-statistics' => 'Statistics are not enabled',
                     'here is already a transaction in progress' => 'not a critical error',
                     'ERROR unknown unknown org.dspace.orcid.model.factory.OrcidFactoryUtils' => 'Known non-critical error for local deployments',
+                    'Cannot retrieve ORCID access token' => 'Known non-critical error',
                 ]
             ),
         ];
