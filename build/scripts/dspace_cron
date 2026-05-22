@@ -2,6 +2,7 @@
 6,21,36,51 * * * *  /dspace/bin/dspace index-authority
 11,26,41,56 * * * *  /dspace/bin/dspace index-discovery
 0 1 1 * *     /dspace/bin/dspace cleanup
+10 4 * * *    /dspace/bin/dspace generate-sitemaps
 10 4 * * *    /dspace/bin/dspace oai import
 10 5 * * *    /dspace/bin/dspace stats-util -i
 10 6 * * *    /dspace/bin/dspace subscription-send -f D
