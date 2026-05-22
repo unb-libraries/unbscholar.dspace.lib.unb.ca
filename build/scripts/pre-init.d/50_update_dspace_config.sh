@@ -8,6 +8,7 @@ CFG="${DSPACE_INSTALL}/config/local.cfg"
 # and POSTGRES_DB_PORT before POSTGRES_DB, DSPACE_REST_NAMESPACE before
 # DSPACE_REST_HOST).
 sed -i \
+  -e "s|DSPACE_REST_SSRBASEURL|${DSPACE_REST_SSRBASEURL:-}|g" \
   -e "s|DSPACE_REST_NAMESPACE|${DSPACE_REST_NAMESPACE}|g" \
   -e "s|DSPACE_REST_HOST|${DSPACE_REST_HOST}|g" \
   -e "s|DSPACE_REST_PORT|${DSPACE_REST_PORT}|g" \
@@ -25,3 +26,7 @@ sed -i \
   -e "s|SOLR_PATH|${SOLR_PATH}|g" \
   -e "s|SOLR_PORT|${SOLR_PORT}|g" \
   "$CFG"
+
+# If DSPACE_REST_SSRBASEURL was unset/empty, drop the now-valueless line so
+# DSpace falls back to its default (${dspace.server.url}). DSpace#9856.
+sed -i '/^dspace\.server\.ssr\.url[[:space:]]*=[[:space:]]*$/d' "$CFG"

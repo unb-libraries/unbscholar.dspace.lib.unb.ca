@@ -49,6 +49,8 @@ ENV JAVA_OPTS="-Xmx6g -Xms6g -Dfile.encoding=UTF-8"
 ENV RSYNC_FLAGS=""
 ENV RSYNC_COPY="rsync -a --inplace --no-compress $RSYNC_FLAGS"
 ENV RSYNC_MOVE="$RSYNC_COPY --remove-source-files"
+# Optional SSR-only REST URL; substituted into local.cfg by pre-init.d/50.
+ENV DSPACE_REST_SSRBASEURL=""
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
