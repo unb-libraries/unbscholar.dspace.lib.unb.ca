@@ -62,8 +62,7 @@ RUN mkdir -p /etc/postfix && cat /build/config/postfix/main.cf >> /etc/postfix/m
   $RSYNC_MOVE /build/config/dspace/ $DSPACE_INSTALL/config/ && \
   $RSYNC_MOVE /build/scripts/ /scripts
 
-RUN /scripts/install_dspace_cron.sh && \
-  /scripts/add_xforward_tomcat.sh && \
+RUN /scripts/add_xforward_tomcat.sh && \
   /scripts/install_geoip_db.sh
 
 EXPOSE 8000
