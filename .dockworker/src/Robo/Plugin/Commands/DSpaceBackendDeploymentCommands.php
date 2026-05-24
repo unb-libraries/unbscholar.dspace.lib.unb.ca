@@ -22,10 +22,11 @@ class DSpaceBackendDeployCommands extends DockworkerDaemonCommands
             array_values(
                 [
                     'Lines that also have INFO aren\'t errors' => 'INFO',
-                    'configuration is missing in solr-statistics' => 'Statistics are not enabled',
-                    'here is already a transaction in progress' => 'not a critical error',
-                    'ERROR unknown unknown org.dspace.orcid.model.factory.OrcidFactoryUtils' => 'Known non-critical error for local deployments',
-                    'Cannot retrieve ORCID access token' => 'Known non-critical error',
+                    'Solr statistics module not enabled' => 'configuration is missing in solr-statistics',
+                    'Concurrent transaction notice, not critical' => 'here is already a transaction in progress',
+                    'Known non-critical ORCID factory error' => 'ERROR unknown unknown org.dspace.orcid.model.factory.OrcidFactoryUtils',
+                    'Known non-critical ORCID token error (legacy phrasing)' => 'Cannot retrieve ORCID access token',
+                    'Known non-critical ORCID token error (DSpace 9.x phrasing)' => 'Failed to retrieve ORCID access token',
                 ]
             ),
         ];
