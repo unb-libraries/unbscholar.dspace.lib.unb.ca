@@ -27,6 +27,7 @@ class DSpaceBackendDeployCommands extends DockworkerDaemonCommands
                     'Known non-critical ORCID factory error' => 'ERROR unknown unknown org.dspace.orcid.model.factory.OrcidFactoryUtils',
                     'Known non-critical ORCID token error (legacy phrasing)' => 'Cannot retrieve ORCID access token',
                     'Known non-critical ORCID token error (DSpace 9.x phrasing)' => 'Failed to retrieve ORCID access token',
+                    'Known non-critical conditional GET If-Match mismatch' => 'If-Match header should contain',
                 ]
             ),
         ];
