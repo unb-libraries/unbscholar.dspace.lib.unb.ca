@@ -1,11 +1,13 @@
 <?php
 
+namespace Dockworker\Robo\Plugin\Commands;
+
 use Dockworker\DockworkerDaemonCommands;
 
 /**
  * Provides commands for building and deploying the DSpace Backend application.
  */
-class DSpaceBackendDeployCommands extends DockworkerDaemonCommands
+class DSpaceBackendDeploymentCommands extends DockworkerDaemonCommands
 {
     /**
      * Provides error log triggers and exceptions for the DSpace Backend application.
