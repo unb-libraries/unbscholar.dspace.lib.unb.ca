@@ -30,9 +30,9 @@ ARG TARGET_DIR=dspace-installer
 COPY --from=build /install /dspace-src
 WORKDIR /dspace-src
 
-ENV ANT_VERSION 1.10.9
-ENV ANT_HOME /tmp/ant-$ANT_VERSION
-ENV PATH $ANT_HOME/bin:$PATH
+ENV ANT_VERSION="1.10.9"
+ENV ANT_HOME="/tmp/ant-$ANT_VERSION"
+ENV PATH="$ANT_HOME/bin:$PATH"
 
 RUN apt-get update && apt-get install -y --no-install-recommends wget && \
   mkdir $ANT_HOME && \
@@ -43,11 +43,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget && \
 # Deployment Image
 FROM tomcat:9-jdk11
 
-ENV DSPACE_INSTALL /dspace
-ENV DSPACE_BIN $DSPACE_INSTALL/bin/dspace
-ENV JAVA_OPTS -Xmx6g -Xms6g -Dfile.encoding=UTF-8
-ENV RSYNC_COPY "rsync -a --inplace --no-compress $RSYNC_FLAGS"
-ENV RSYNC_MOVE "$RSYNC_COPY --remove-source-files"
+ENV DSPACE_INSTALL="/dspace"
+ENV DSPACE_BIN="$DSPACE_INSTALL/bin/dspace"
+ENV JAVA_OPTS="-Xmx6g -Xms6g -Dfile.encoding=UTF-8"
+ENV RSYNC_COPY="rsync -a --inplace --no-compress $RSYNC_FLAGS"
+ENV RSYNC_MOVE="$RSYNC_COPY --remove-source-files"
 
 COPY --from=ant_build /dspace $DSPACE_INSTALL
 COPY build /build
