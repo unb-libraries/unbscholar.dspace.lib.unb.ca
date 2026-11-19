@@ -13,4 +13,4 @@ do
   fi
 done
 
-catalina.sh run
+exec catalina.sh run
