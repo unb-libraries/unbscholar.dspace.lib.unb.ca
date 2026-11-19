@@ -44,10 +44,10 @@ dockworker:
         - SCHOLAR
     image:
       name: ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca
-      parent: 
-        - dspace/dspace:9.0
-        - maven:3-jdk-8-alpine
-        - tomcat:8-jre8
+      parent:
+        - maven:3-eclipse-temurin-17
+        - eclipse-temurin:17
+        - tomcat:10.1-jdk17-temurin-jammy
       repository: GitHub
       push-branches:
         - dev

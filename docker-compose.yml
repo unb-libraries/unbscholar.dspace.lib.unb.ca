@@ -12,9 +12,11 @@ services:
       - "3507:8080"
     networks:
       - unbscholar.dspace.lib.unb.ca
+    depends_on:
+      unbscholar-postgres-lib-unb-ca:
+        condition: service_healthy
   unbscholar-postgres-lib-unb-ca:
-    build:
-      context: postgres/
+    image: ghcr.io/unb-libraries/postgres:17.9
     restart: unless-stopped
     env_file:
       - ./env/dspace.env
@@ -22,16 +24,43 @@ services:
       - "5432"
     networks:
       - unbscholar.dspace.lib.unb.ca
+    volumes:
+      - ./local/postgres/build/scripts/install-pgcrypto.sh:/docker-entrypoint-initdb.d/install-pgcrypto.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
   unbscholar-solr-lib-unb-ca:
-    build:
-      context: solr/
+    image: ghcr.io/unb-libraries/solr:9.10
     restart: unless-stopped
     env_file:
       - ./env/dspace.env
+    environment:
+      SOLR_MODULES: extraction,langid,ltr,analysis-extras
+      SOLR_OPTS: "-Dsolr.lock.type=none -Dsolr.autoSoftCommit.maxTime=3000"
+      SOLR_JAVA_MEM: "-Xms1g -Xmx1g"
     expose:
-      - "8080"
+      - "8983"
     networks:
       - unbscholar.dspace.lib.unb.ca
+    volumes:
+      - ./local/solr/build/data/cores:/cores-template:ro
+    command:
+      - bash
+      - -c
+      - |
+        set -e
+        for CORE in authority oai qaevent search statistics suggestion; do
+          if [ -d "/cores-template/$$CORE" ] && [ ! -f "/var/solr/data/$$CORE/core.properties" ]; then
+            echo "Configuring core $$CORE..."
+            cp -r "/cores-template/$$CORE" "/var/solr/data/$$CORE"
+            echo "name=$$CORE" > "/var/solr/data/$$CORE/core.properties"
+          fi
+        done
+        exec /opt/solr/docker/scripts/docker-entrypoint.sh solr-foreground
+
 networks:
   unbscholar.dspace.lib.unb.ca:
     name: unbscholar.dspace.lib.unb.ca
