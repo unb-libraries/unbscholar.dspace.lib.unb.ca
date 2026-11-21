@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends git rsync && \
   rsync -a /tmpDSpace/ /app/
 
 COPY build/config/dspace/local.cfg /app/local.cfg
+# Source patches. git apply refuses a patch that does not apply exactly.
+COPY build/patches /build/patches
+RUN git apply --verbose /build/patches/*.patch
 RUN mkdir /install && \
   chown -Rv dspace: /install && \
   chown -Rv dspace: /app

@@ -1,0 +1,14 @@
+--- a/dspace-api/src/main/java/org/dspace/app/util/SyndicationFeed.java
++++ b/dspace-api/src/main/java/org/dspace/app/util/SyndicationFeed.java
+@@ -172,8 +172,9 @@
+ 
+         Map<String, String> labels = getLabels();
+ 
+-        // dso is null for the whole site, or a search without scope
+-        if (dso == null) {
++        // dso is null for the whole site, or a search without scope. Since 10.0, ScopeResolver also
++        // returns items; an item scope gets the site title, as in 9.x, so the feed has a channel title.
++        if (!(dso instanceof IndexableCollection) && !(dso instanceof IndexableCommunity)) {
+             defaultTitle = configurationService.getProperty("dspace.name");
+             defaultDescriptionField = localize(labels, MSG_FEED_DESCRIPTION);
+             objectURL = resolveURL(request, null);
