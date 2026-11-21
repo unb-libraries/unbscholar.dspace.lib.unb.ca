@@ -15,7 +15,7 @@ dockworker:
       uuid: 3507
     framework:
       name: DSpace
-      version: 9
+      version: 10
       startup_finished_marker: 'Server startup in'
       endpoint:
         name: http
@@ -45,9 +45,9 @@ dockworker:
     image:
       name: ghcr.io/unb-libraries/unbscholar.dspace.lib.unb.ca
       parent:
-        - maven:3-eclipse-temurin-17
-        - eclipse-temurin:17
-        - tomcat:10.1-jdk17-temurin-jammy
+        - maven:3-eclipse-temurin-21
+        - eclipse-temurin:21
+        - tomcat:10.1-jdk21-temurin-noble
       repository: GitHub
       push-branches:
         - dev

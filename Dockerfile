@@ -1,8 +1,8 @@
 # Maven Builder.
-FROM maven:3-eclipse-temurin-17 AS build
+FROM maven:3-eclipse-temurin-21 AS build
 
 ARG TARGET_DIR=dspace-installer
-ARG DSPACE_REFSPEC=dspace-9.2
+ARG DSPACE_REFSPEC=dspace-10.1
 
 WORKDIR /app
 RUN useradd dspace && \
@@ -25,12 +25,12 @@ RUN mvn --no-transfer-progress package&& \
 
 
 # Ant Commands.
-FROM eclipse-temurin:17 AS ant_build
+FROM eclipse-temurin:21 AS ant_build
 ARG TARGET_DIR=dspace-installer
 COPY --from=build /install /dspace-src
 WORKDIR /dspace-src
 
-ENV ANT_VERSION="1.10.14"
+ENV ANT_VERSION="1.10.15"
 ENV ANT_HOME="/tmp/ant-$ANT_VERSION"
 ENV PATH="$ANT_HOME/bin:$PATH"
 
@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget && \
 
 
 # Deployment Image
-FROM tomcat:10.1-jdk17-temurin-jammy
+FROM tomcat:10.1-jdk21-temurin-noble
 
 ENV DSPACE_INSTALL="/dspace"
 ENV DSPACE_BIN="$DSPACE_INSTALL/bin/dspace"

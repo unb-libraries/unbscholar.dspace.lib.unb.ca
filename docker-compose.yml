@@ -16,7 +16,7 @@ services:
       unbscholar-postgres-lib-unb-ca:
         condition: service_healthy
   unbscholar-postgres-lib-unb-ca:
-    image: ghcr.io/unb-libraries/postgres:17.9
+    image: mirror.gcr.io/library/postgres:17.12
     restart: unless-stopped
     env_file:
       - ./env/dspace.env
@@ -33,7 +33,7 @@ services:
       retries: 20
       start_period: 30s
   unbscholar-solr-lib-unb-ca:
-    image: ghcr.io/unb-libraries/solr:9.10
+    image: mirror.gcr.io/library/solr:9.11
     restart: unless-stopped
     env_file:
       - ./env/dspace.env
@@ -52,7 +52,7 @@ services:
       - -c
       - |
         set -e
-        for CORE in authority oai qaevent search statistics suggestion; do
+        for CORE in audit authority oai qaevent search statistics suggestion; do
           if [ -d "/cores-template/$$CORE" ] && [ ! -f "/var/solr/data/$$CORE/core.properties" ]; then
             echo "Configuring core $$CORE..."
             cp -r "/cores-template/$$CORE" "/var/solr/data/$$CORE"

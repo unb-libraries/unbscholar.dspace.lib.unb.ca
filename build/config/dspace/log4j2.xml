@@ -18,6 +18,10 @@
          Possible values (from most to least info):
    DEBUG, INFO, WARN, ERROR, FATAL -->
     <Property name='loglevel.other'>WARN</Property>
+
+    <!-- Level for audit event lines (DSpace 10+). Events are emitted only when
+         audit.enabled = true; set OFF to drop them even then. -->
+    <Property name='loglevel.audit.events'>ALL</Property>
   </Properties>
 
   <Appenders>
@@ -67,6 +71,13 @@
             level='INFO'
             additivity='false'>
       <AppenderRef ref='A2'/>
+    </Logger>
+
+    <!-- Audit events (DSpace 10+), written to stdout with everything else. -->
+    <Logger name='org.dspace.app.audit.event'
+            level='${loglevel.audit.events}'
+            additivity='false'>
+      <AppenderRef ref='A1'/>
     </Logger>
 
     <!-- Block services logging except on exceptions -->
