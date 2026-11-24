@@ -1,0 +1,16 @@
+Accept a plain-text value in the linked metadata field of a required relation-field.
+Backport of DSpace/DSpace#13026 (fixes DSpace/DSpace#12815); drop once a 10.x release includes it.
+
+--- a/dspace-api/src/main/java/org/dspace/validation/MetadataValidator.java
++++ b/dspace-api/src/main/java/org/dspace/validation/MetadataValidator.java
+@@ -190,7 +190,9 @@
+                                                 SubmissionStepConfig config) {
+         if (input.isRelationshipField() && input.isRequired()) {
+             String relationshipType = input.getRelationshipType();
+-            if (itemService.getMetadataByMetadataString(item, "relation." + relationshipType).isEmpty()) {
++            if (itemService.getMetadataByMetadataString(item, "relation." + relationshipType).isEmpty() &&
++                    (input.getFieldName() == null ||
++                            itemService.getMetadataByMetadataString(item, input.getFieldName()).isEmpty())) {
+                 try {
+                     List<RelationshipType> relationTypes =
+                         relationshipTypeService.findByLeftwardOrRightwardTypeName(context, relationshipType);
